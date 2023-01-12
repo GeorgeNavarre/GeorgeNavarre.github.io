@@ -105,33 +105,39 @@ iframe,.container{
 .box{
   float:left;
   text-align: center;
-  width:30%;
-  padding:10px;
+  margin-left: 4%;
+  width:15%;
+  padding:5px;
 }
 
 
-footer{
-  padding:15px;
-  color:#ffffff;
-  background:#35424a
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #35424a;
+  color: #fff;
 }
 
-footer h1{
-  float:left;
-  font-size:25px;
+.social-media-links {
+  display: flex;
 }
 
-footer form {
-  float:right;
-  margin-top:15px;
+.social-media-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
 }
 
-footer input[type="email"]{
-  padding:4px;
-  height:25px;
-  width:250px;
+.social-media-links a:hover {
+  color: #ddd;
 }
 
+.copyright {
+  flex: 0 0 auto;
+  text-align: center;
+}
 
 /* Media Queries */
 @media(max-width: 768px){
