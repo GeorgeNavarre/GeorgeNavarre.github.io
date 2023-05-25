@@ -1,185 +1,47 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Mining and ecological focused knowlege interface">
-  <meta name="keywords"
-    content="GIS, Geographical Information System, Ecology, Mining, Research, Knowlege Manager, Knowlege Graph, Simulation.">
-  <meta name="author" content="PanEcology">
-  <title>PanEcology | Welcome</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div id="branding">
-        <a href="index.html"><img src="img/PanEcology Logo longboi.png" alt="" style="border:none; width:200px;"></a>
+  <head>
+    <title>Spatial Explorer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <img src="logo.svg" alt="Logo">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MAP</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    
+    <section class="map">
+      <h1>SPATIAL EXPLORER</h1>
+      <p>Explore extraction projects and their ecological and societal impacts in our Spatial Explorer. Data is organized by our Knowledge Graph and supplied to you in this easy-to-use format.</p>
+      <a href="#" class="explore-btn">EXPLORE</a>
+    </section>
+    
+    <section class="boxes">
+      <div class="box teal">
+        <h2>Knowledge Manager</h2>
+        <p>Browse our Knowledge Graph directly through PanEcology’s Knowledge Manager and help us start making new connections!</p>
       </div>
-      <nav>
-        <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="map.html">Map</a></li>
-          <li><a href="mission.html">Our Mission</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <section id="miniabout">
-    <div class="container">
-      <div data-aos="flip-up">
-        <h1 style="font-family: Lato-ThinItalic; text-align: center; font-size: 100px; margin-top: 10%; margin-bottom: 10%;">
-          WHAT WE DO</h1>
-      </div>
-
-      <div class="animbox" style="background-image:url('img/water-color-world-map-painting.gif'); background-size: cover; border-radius: 6px; filter: drop-shadow(0 0px 10px #2773EF);">
-        <div data-aos="fade-right">
-          <img id="img-animate-left" src="img/character.png" alt=""
-            style="width: calc(50px + 13%); float: left;">
-          <div id="wordBox">
-            <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin:auto;">Information and Search
-            </h2>
-            <p style="width: 95%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide
-              access
-              to information, so that people can more easily make informed decisions and form informed opinions. Click
-              here
-              to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-              site-specific information about the physical and biological nature of a place you are interested in. You
-              will
-              also find a knowledge graph to help your plain language search for more information about a place or a
-              topic.
-              This is where you can start your problem solving journey.</p>
-          </div>
+      
+      <div class="box yellow">
+        <h2>Natural Language Search</h2>
+        <p>Ask a question about Ecology in natural language! We’ll let you know if we can’t answer it quite yet.</p>
+        <div class="search">
+          <input type="text" placeholder="Search">
+          <a href="#" class="view-map-btn">View Map</a>
+          <a href="#" class="view-km-btn">View KM</a>
         </div>
       </div>
-
-      <div class="animbox">
-        <div data-aos="fade-left">
-          <img id="img-animate-right" src="img/stibmite.jpg" alt=""
-            style="border-radius: 50%; width: 15%; float: right;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
+      
+      <div class="box purple">
+        <h2>Game Development</h2>
+        <p>We are also making games and simulations! Click below to see where we’re at in the process and sign up for early access when they are ready!</p>
+        <a href="#" class="game-btn">SEE OUR GAMES</a>
       </div>
-
-      <div class="animbox">
-        <div data-aos="fade-right">
-          <img id="img-animate-left" src="img/stibmite.jpg" alt="" style="border-radius: 50%; width: 15%; float: left;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
-      </div>
-
-      <div class="animbox">
-        <div data-aos="fade-left">
-          <img id="img-animate-right" src="img/stibmite.jpg" alt=""
-            style="border-radius: 50%; width: 15%; float: right;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
-      </div>
-
-      <div class="animbox">
-        <div data-aos="fade-right">
-          <img id="img-animate-left" src="img/stibmite.jpg" alt="" style="border-radius: 50%; width: 15%; float: left;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
-      </div>
-
-      <div class="animbox">
-        <div data-aos="fade-left">
-          <img id="img-animate-right" src="img/stibmite.jpg" alt=""
-            style="border-radius: 50%; width: 15%; float: right;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
-      </div>
-
-      <div class="animbox">
-        <div data-aos="fade-right">
-          <img id="img-animate-left" src="img/stibmite.jpg" alt="" style="border-radius: 50%; width: 15%; float: left;">
-          <h2 style="font-family: Lato-Thin; width: 50%; text-align: center; margin: auto;">Information and Search</h2>
-          <p style="width: 50%; text-align: center; margin: auto;">PanEcology.com’s primary purpose is to provide access
-            to information, so that people can more easily make informed decisions and form informed opinions. Click
-            here
-            to access our information portal. Here you will find ecoregional maps that are doorways to regional and
-            site-specific information about the physical and biological nature of a place you are interested in. You
-            will
-            also find a knowledge graph to help your plain language search for more information about a place or a
-            topic.
-            This is where you can start your problem solving journey.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-    })
-  </script>
-</body>
-
-<footer>
-  <div class="footer-container">
-    <div>
-      <img src="img/logo/SVG/PanEcology_logo_w_outline_notext.svg" alt="Logo" width="100" height="100">
-    </div>
-    <div class="social-media-links">
-      <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-      <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
-      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-      <a href="#"><i class="fab fa-pinterest-square fa-2x"></i></a>
-      <a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
-    </div>
-    <p class="copyright">Copyright &copy; 2022</p>
-  </div>
-</footer>
-
+    </section>
+  </body>
 </html>
