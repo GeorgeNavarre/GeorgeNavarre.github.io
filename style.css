@@ -225,6 +225,7 @@ nav img {
 }
 .view-map-btn,
 .view-km-btn {
+  font-family: Geologica, sans-serif;
   display: block;
   background-color: teal;
   text-align: center;
@@ -250,23 +251,26 @@ nav img {
 }
 
 .game-btn {
-  font-size: 14;
   position: absolute;
-  font-weight: 500;
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 100px;
-  margin: 15px;
-  background-color: #558a84;
-  height: 30px;
+  font-family: Geoligica, sans-serif;
+  font-size: 20px;
+  display: block;
+  background-color: teal;
   text-align: center;
+  padding: 5px 10px;
+  border-radius: 100px;
+  text-decoration: none;
+  margin: 15px;
+  transition: 0.03s;
+  color: #ffe4a8;
+  transition: 0.3s;
 }
 
-.game-btn a {
-  text-align: center;
-  text-decoration: none;
-  color: #ffe4a8;
+.game-btn:hover {
+  scale: 105%;
 }
 
 /* page styles start here*/
