@@ -26,6 +26,8 @@ nav {
   font-weight: 700;
   font-size: 20px;
   color: white;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  margin-bottom: 5px;
 }
 
 nav img {
@@ -130,6 +132,7 @@ nav img {
   padding: none;
   margin: -5px;
   position: relative;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .img-div {
@@ -173,6 +176,7 @@ nav img {
   margin: 5px;
   height: 200px;
   font-family: Geologica, sans-serif;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .box h2 {
@@ -306,6 +310,7 @@ nav img {
   background-image: linear-gradient(#ffe4a8, #bba77c);
   margin: 50px;
   padding: 25px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .overview-div div {
@@ -316,6 +321,7 @@ nav img {
   position: relative;
   filter: brightness(75%);
   transition: 0.5s;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .video-div:hover {
@@ -439,12 +445,14 @@ nav img {
   font-family: Geologica, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  border-style: dashed;
+  /*border-style: dashed;*/
   border-width: 1px;
   height: 100%;
   width: 100%;
-  border-color: #231333;
+  /*border-color: #231333;*/
   text-transform: capitalize;
+  background-image: linear-gradient(#74c7c0, #a0d8d3);
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .contact-section i {
