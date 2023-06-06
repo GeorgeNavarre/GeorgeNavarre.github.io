@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Spatial Explorer</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav>
-      <img src="logo.svg" alt="Logo">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">MAP</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
-    
-    <section class="map">
-      <h1>SPATIAL EXPLORER</h1>
-      <p>Explore extraction projects and their ecological and societal impacts in our Spatial Explorer. Data is organized by our Knowledge Graph and supplied to you in this easy-to-use format.</p>
-      <a href="#" class="explore-btn">EXPLORE</a>
-    </section>
-    
-    <section class="boxes">
-      <div class="box teal">
-        <h2>Knowledge Manager</h2>
-        <p>Browse our Knowledge Graph directly through PanEcology’s Knowledge Manager and help us start making new connections!</p>
-      </div>
-      
-      <div class="box yellow">
-        <h2>Natural Language Search</h2>
-        <p>Ask a question about Ecology in natural language! We’ll let you know if we can’t answer it quite yet.</p>
-        <div class="search">
-          <input type="text" placeholder="Search">
-          <a href="#" class="view-map-btn">View Map</a>
-          <a href="#" class="view-km-btn">View KM</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PanEcology Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+    <body>
+      <nav>
+        <img src="logo.svg" alt="Logo">
+        <div class="support-link">
+          <a href= "pages\support.html">Help Support Our Mission!</a>
         </div>
-      </div>
-      
-      <div class="box purple">
-        <h2>Game Development</h2>
-        <p>We are also making games and simulations! Click below to see where we’re at in the process and sign up for early access when they are ready!</p>
-        <a href="#" class="game-btn">SEE OUR GAMES</a>
-      </div>
-    </section>
-  </body>
+        <ul class="nav-buttons">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="pages\map.html">SPATIAL EXPLORER</a></li>
+          <li><a href="pages\about.html">ABOUT</a></li>
+          <li><a href="pages\contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <section class="hero-container">
+        <div class="img-div">
+          <img class="map" src="map.png" alt="Map of ecoregions of the US">
+        </div>
+        <div class="hero-text">
+          <h1>Spatial Explorer</h1>
+          <p>Explore extraction projects and their ecological and societal impacts in our Spatial Explorer. Data is organized by our Knowledge Graph and supplied to you in this easy-to-use format.</p>
+          <div class="hero-btn">
+            <a href="pages\map.html">Explore</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="boxes">
+        <div class="box teal">
+          <h2>Knowledge Manager</h2>
+          <p>Browse our Knowledge Graph directly through PanEcology’s Knowledge Manager and help us start making new connections!</p>
+        </div>
+        
+        <div class="box yellow">
+          <h2>Natural Language Search</h2>
+          <p>Ask a question about Ecology in natural language! We’ll let you know if we can’t answer it quite yet.</p>
+          <div class="search">
+            <input type="text" placeholder="Search">
+            <a href="#" class="view-map-btn">View Map</a>
+            <a href="#" class="view-km-btn">View KM</a>
+          </div>
+        </div>
+        
+        <div class="box purple">
+          <h2>Game Development</h2>
+          <p>We are also making games and simulations! Click below to see where we’re at in the process and sign up for early access when they are ready!</p>
+          <div class="game-btn">
+            <a href="#" >SEE OUR GAMES</a>
+          </div>
+        </div>
+      </section>
+
+    </body>
+</html>
+
+
+<body>
+  
+</body>
 </html>
