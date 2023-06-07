@@ -1,6 +1,6 @@
 /* Set default font and box-sizing */
 * {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Geologica, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,14 +11,22 @@
 
 body {
   color: white;
-  background-image: linear-gradient(-90deg, #558a84, #71b9b1, #558a84),
-    linear-gradient(0deg, white, black, black);
-  background-blend-mode: screen;
+  background-image: linear-gradient(
+      rgba(85, 138, 132, 0.7),
+      rgb(113, 185, 177, 0.7),
+      rgba(85, 138, 132, 0.7)
+    ),
+    url(86343.jpg);
+  background-size: contain;
+  background-size: 100vw;
+  background-blend-mode: soft-light;
+  width: 100vw;
 }
 
 nav {
-  /*background-color: #71b9b1;*/
-  background-image: linear-gradient(-90deg, #558a84, #71b9b1, #558a84);
+  background-color: #ffecc2;
+  /* background-image: linear-gradient(-90deg, #558a84, #71b9b1, #558a84); */
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,10 +36,14 @@ nav {
   color: white;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
   margin-bottom: 5px;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
 }
 
 nav img {
-  height: 125px;
+  height: 120px;
   padding-left: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -40,32 +52,35 @@ nav img {
 
 .support-link {
   display: flex;
-  padding: 15px;
-  max-width: none;
-  background-color: #381c50;
   align-items: center;
-  border-radius: 100px;
+  padding: 15px;
+  height: 100px;
   transition: 0.3s;
+  background-color: #381c50;
 }
 
 .support-link a {
   text-decoration: none;
   text-align: center;
   font-family: Geologica, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffe4a8;
 }
 
 .support-link:hover {
-  background-color: #231333;
+  background-color: #ffecc2;
+  scale: 102%;
 }
 .support-link:hover a {
-  color: #c2c2c2;
+  color: #381c50;
 }
 
 .nav-buttons {
   display: flex;
   list-style: none;
   align-items: center;
-  height: 125px;
+  height: 100%;
   padding-right: 20px;
   /*background-image: linear-gradient(90deg, #71b9b1, #558a84);*/
 }
@@ -76,30 +91,32 @@ nav img {
   padding: 15px;
   height: 100px;
   transition: 0.3s;
+  color: #381c50;
 }
 
 .nav-buttons a {
   text-decoration: none;
   text-align: center;
   font-family: Geologica, sans-serif;
+  color: inherit;
+  text-transform: uppercase;
 }
 
 .nav-buttons li:hover {
   background-color: #381c50;
+  color: #ffe4a8;
+  scale: 95%;
 }
 
 /* Style the map section */
 
-.hero-text p {
-  color: #231333;
-  font-family: Geologica, sans-serif;
-}
-
 .hero-container {
+  background-color: #ffe4a8;
   position: relative;
   text-align: left;
   color: white;
-  width: 100%;
+  width: 100vw;
+  padding-bottom: 10px;
 }
 
 .hero-text {
@@ -109,30 +126,40 @@ nav img {
   left: 50%;
   transform: translate(-50%, -60%);
   width: 75%;
+  color: #ffecc2;
 }
 
 .hero-text h1 {
   font-size: 60px;
   padding-bottom: 15px;
   font-family: Geologica, sans-serif;
+  color: inherit;
+}
+
+.hero-text em {
+  font-size: 60px;
+  padding-bottom: 15px;
+  font-family: Geologica, sans-serif;
+  color: inherit;
 }
 
 .hero-text p {
-  font-size: 20px;
+  font-size: 25px;
+  font-family: Geologica, sans-serif;
   font-weight: 300;
   color: white;
   padding-bottom: 20px;
+  color: inherit;
 }
 
 .map {
-  filter: brightness(40%);
+  filter: brightness(40%) drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2)) blur(1px);
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   max-height: 600px;
   padding: none;
-  margin: -5px;
+  margin-top: -5px;
   position: relative;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .img-div {
@@ -141,12 +168,15 @@ nav img {
 
 .hero-btn {
   background-color: #558a84;
-  padding: 15px;
+  padding: 10px;
   border-radius: 100px;
-  width: 200px;
+  max-width: 500px;
   margin: auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
+  scale: 120%;
 }
 
 .hero-btn:hover {
@@ -158,25 +188,66 @@ nav img {
   font-family: Geologica, sans-serif;
   font-size: 25px;
   text-decoration: none;
+  color: #ffecc2;
 }
 
 /* Style the boxes section */
-.boxes {
+
+.boxes-header {
+  /* background-color: #ffecc2; */
+  /* background-image: linear-gradient(-90deg, #558a84, #71b9b1, #558a84); */
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  max-width: 2000px;
+  align-items: center;
+  font-family: Geologica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  /* filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2)); */
+  margin-bottom: 5px;
+  margin-top: 15px;
+  top: 0;
+}
+
+.boxes-header h1 {
+  color: #381c50;
+  font-size: 60px;
+  font-family: Geologica, sans-serif;
+  text-emphasis: none;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto auto;
+  max-width: 1000px;
   max-height: 2000px;
   margin: 0 auto;
-  padding: 20px;
+  gap: 20px;
 }
 
 .box {
   padding: 20px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   margin: 5px;
-  height: 200px;
+  height: 300px;
+  width: 500px;
   font-family: Geologica, sans-serif;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+}
+
+.box-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-image img {
+  width: 500px;
+  height: 300px;
 }
 
 .box h2 {
@@ -189,8 +260,26 @@ nav img {
   font-family: inherit;
 }
 
+.celeste {
+  background-image: linear-gradient(175deg, #95dbd3, #9cfff3);
+  flex-basis: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #381c50;
+}
+
+.celeste h2 {
+  color: inherit;
+}
+
+.celeste p {
+  color: inherit;
+}
+
 .teal {
   background-image: linear-gradient(175deg, #71b9b1, #548a83);
+  background-blend-mode: screen;
   flex-basis: 30%;
   opacity: 90%;
 }
@@ -203,11 +292,11 @@ nav img {
 }
 
 .yellow h2 {
-  color: #231333;
+  color: #381c50;
 }
 
 .yellow p {
-  color: #231333;
+  color: #381c50;
 }
 
 .search {
@@ -287,7 +376,7 @@ nav img {
   height: 100vw;
   border-style: dashed;
   border-width: 1px;
-  border-color: #231333;
+  border-color: #381c50;
   font-size: x-large;
   display: flex;
   align-items: center;
@@ -298,7 +387,7 @@ nav img {
   margin: auto;
   margin-top: 150px;
   font-size: 50px;
-  color: #231333;
+  color: #381c50;
 }
 
 /*about us*/
@@ -340,7 +429,7 @@ nav img {
   font-family: Geologica, sans-serif;
   font-size: 25px;
   font-weight: 500;
-  color: #231333;
+  color: #381c50;
 }
 
 .video-btn {
@@ -357,7 +446,7 @@ nav img {
   height: 100vw;
   border-style: dashed;
   border-width: 1px;
-  border-color: #231333;
+  border-color: #381c50;
   font-size: x-large;
   display: flex;
   align-items: center;
@@ -365,7 +454,7 @@ nav img {
 }
 
 .graphic p {
-  color: #231333;
+  color: #381c50;
 }
 
 .team-section {
@@ -377,7 +466,7 @@ nav img {
 .team-section h2 {
   font-family: Geologica, sans-serif;
   font-size: xxx-large;
-  color: #231333;
+  color: #381c50;
 }
 
 .team-section ul {
@@ -404,7 +493,7 @@ nav img {
   border-width: 1px;
   height: 100%;
   width: 100%;
-  border-color: #231333;
+  border-color: #381c50;
 }
 
 .team-member-card img {
@@ -415,7 +504,7 @@ nav img {
 }
 
 .team-member-card p {
-  color: #231333;
+  color: #381c50;
 }
 
 /*Contact*/
@@ -449,7 +538,7 @@ nav img {
   border-width: 1px;
   height: 100%;
   width: 100%;
-  /*border-color: #231333;*/
+  /*border-color: #381c50;*/
   text-transform: capitalize;
   background-image: linear-gradient(#74c7c0, #a0d8d3);
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
@@ -458,13 +547,13 @@ nav img {
 .contact-section i {
   font-size: 100px;
   margin-bottom: 20px;
-  color: #231333;
+  color: #381c50;
 }
 
 .contact-section h3 {
-  color: #231333;
+  color: #381c50;
 }
 
 .contact-section p {
-  color: #231333;
+  color: #381c50;
 }
