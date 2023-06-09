@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
                     
             <nav class="sticky">
                 <a href="../index.html">
-                <img src="../logo.svg" alt="Logo" />
+                <img src="../images/logo.svg" alt="Logo" />
                 </a>
                 <div class="support-link">
                 <a href="../pages/support.html">Help Support Our Mission!</a>
@@ -27,10 +27,10 @@ class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <section class="bottom-logo">
-  <div class=""><img src="../logo.svg" /></div>
+  <div class=""><img src="../images/logo.svg" /></div>
 </section>
     <footer>
-    <p class="copywrite">© Copywrite PanEcology 2023</p>
+    <p class="copyright">© Copyright PanEcology 2023</p>
     <div class="footer-container">
       <div class="footer-section">
         <h3>Address</h3>
