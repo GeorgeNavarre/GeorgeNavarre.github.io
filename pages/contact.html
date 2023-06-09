@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PanEcology Home</title>
+    <script
+      src="https://kit.fontawesome.com/7f29f39150.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../main.js"></script>
     <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,26 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/7f29f39150.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
+
   <body>
-    <nav>
-      <a href="../index.html">
-        <img src="../logo.svg" alt="Logo" />
-      </a>
-      <div class="support-link">
-        <a href="pages\support.html">Help Support Our Mission!</a>
-      </div>
-      <ul class="nav-buttons">
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="map.html">SPATIAL EXPLORER</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
+    <my-header> </my-header>
     <div class="full_page">
       <section class="hero-container">
         <div class="img-div">
@@ -69,7 +59,7 @@
               Bellingham, WA 12345
             </p>
           </li>
-          <li></li>
+
           <li class="contact">
             <i class="fa-solid fa-newspaper"></i>
             <h3>Press</h3>
@@ -78,5 +68,6 @@
         </ul>
       </section>
     </div>
+    <my-footer></my-footer>
   </body>
 </html>

@@ -1,86 +1,109 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PanEcology Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-    <body>
-      <nav class="sticky">
-        <a href="index.html">
-          <img src="logo.svg" alt="Logo">
-        </a>
-        <div class="support-link">
-          <a href= "pages\support.html">Help Support Our Mission!</a>
-        </div>
-        <ul class="nav-buttons">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="pages\map.html">Spatial Explorer</a></li>
-          <li><a href="pages\about.html">ABOUT</a></li>
-          <li><a href="pages\contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-      <section class="hero-container">
-        <div class="img-div">
-          <img class="map" src="/hero-center-for-chemical-ecology.jpg" alt="Map of ecoregions of the US">
-        </div>
-        <div class="hero-text">
-          <h1>Finding the <em>sources</em> of our <em>resources</em>... <br> and our problems.</h1>
-          <p>Making the neccessary information available so we can make good decisions about the future of the planet.</p>
-          <div class="hero-btn">
-            <a href="pages\about.html">How are we doing it?</a>
-          </div>
-        </div>
-      </section>
-      <div class="boxes-header">
-        <h1>What we're up to</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PanEcology Home</title>
+    <script
+      src="https://kit.fontawesome.com/7f29f39150.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../main.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <my-header> </my-header>
+
+    <section class="hero-container">
+      <div class="img-div">
+        <img
+          class="map"
+          src="/hero-center-for-chemical-ecology.jpg"
+          alt="Map of ecoregions of the US"
+        />
       </div>
-      <section class="boxes">
-        <div class="box celeste">
-          <h2>Spatial Explorer</h2>
-          <p>Explore extraction projects and their ecological and societal impacts in our Spatial Explorer. Data is organized by our Knowledge Graph and supplied to you in this easy-to-use format.</p>
+      <div class="hero-text">
+        <h1>
+          Finding the <em>sources</em> of our <em>resources</em>... <br />
+          and our problems.
+        </h1>
+        <p>
+          Making the neccessary information available so we can make good
+          decisions about the future of the planet.
+        </p>
+        <div class="hero-btn">
+          <a href="pages\about.html">How are we doing it?</a>
         </div>
-        <div class="box-image">
-          <img src="map.png">
-        </div>
+      </div>
+    </section>
+    <div class="boxes-header">
+      <h1>What we're up to</h1>
+    </div>
+    <section class="boxes">
+      <div class="box celeste">
+        <h2>Spatial Explorer</h2>
+        <p>
+          Explore extraction projects and their ecological and societal impacts
+          in our Spatial Explorer. Data is organized by our Knowledge Graph and
+          supplied to you in this easy-to-use format.
+        </p>
+      </div>
+      <div class="box-image">
+        <img src="Terrestrial_ecoregions_USA_CAN_MEX.svg.png" />
+      </div>
 
-        <div class="box-image">
-          <img src="thecode2-1.png">
-        </div>
+      <div class="box-image">
+        <img src="search-icon-png-9985.png" alt="" />
+      </div>
 
-        <div class="box teal">
-          <h2>Knowledge Manager</h2>
-          <p>Browse our Knowledge Graph directly through PanEcology’s Knowledge Manager and help us start making new connections!</p>
+      <div class="box yellow">
+        <h2>Natural Language Search</h2>
+        <p>
+          Ask a question about Ecology in natural language! We’ll let you know
+          if we can’t answer it quite yet.
+        </p>
+        <div class="search">
+          <input type="text" placeholder="Ask a question" />
+          <a href="#" class="view-map-btn">View Map</a>
+          <a href="#" class="view-km-btn">View KM</a>
         </div>
-        
-        <div class="box yellow">
-          <h2>Natural Language Search</h2>
-          <p>Ask a question about Ecology in natural language! We’ll let you know if we can’t answer it quite yet.</p>
-          <div class="search">
-            <input type="text" placeholder="Search">
-            <a href="#" class="view-map-btn">View Map</a>
-            <a href="#" class="view-km-btn">View KM</a>
-          </div>
-        </div>
-        
-        <div class="box purple">
-          <h2>Game Development</h2>
-          <p>We are also making games and simulations! Click below to see where we’re at in the process and sign up for early access when they are ready!</p>
-            <a class="game-btn" href="#" >SEE OUR GAMES</a>
-          
-        </div>
-      </section>
+      </div>
 
-    </body>
-</html>
+      <div class="box teal">
+        <h2>Knowledge Manager</h2>
+        <p>
+          Browse our Knowledge Graph directly through PanEcology’s Knowledge
+          Manager and help us start making new connections!
+        </p>
+      </div>
 
+      <div class="box-image">
+        <img
+          src="knowledge-graph-human-phenotype-ontology-science-point-bottom-view-a3fd72d703927739dfebd695a42cfbd7.png"
+        />
+      </div>
 
-<body>
-  
-</body>
+      <div class="box-image"></div>
+
+      <div class="box purple">
+        <h2>Game Development</h2>
+        <p>
+          We are also making games and simulations! Click below to see where
+          we’re at in the process and sign up for early access when they are
+          ready!
+        </p>
+        <a class="game-btn" href="#">SEE OUR GAMES</a>
+      </div>
+    </section>
+    <my-footer></my-footer>
+  </body>
 </html>
