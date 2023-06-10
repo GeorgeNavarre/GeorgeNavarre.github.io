@@ -2,20 +2,26 @@ class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
                     
-            <nav class="sticky">
-                <a href="../index.html">
-                <img src="../images/logo.svg" alt="Logo" />
-                </a>
-                <div class="support-link">
-                <a href="../pages/support.html">Help Support Our Mission!</a>
-                </div>
-                <ul class="nav-buttons">
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../pages/map.html">Spatial Explorer</a></li>
-                <li><a href="../pages/about.html">ABOUT</a></li>
-                <li><a href="../pages/contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
+    <nav class="sticky">
+    <a href="../index.html">
+      <img class="logo" src="../images/logo.svg" alt="Logo" />
+      <img class="logo-small" src=""/>
+    </a>
+    <input type="checkbox" id="check" />
+   
+    <div class="support-link">
+      <a href="../pages/support.html">Help Support Our Mission!</a>
+    </div>
+    <ul class="nav-buttons">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../pages/map.html">Spatial Explorer</a></li>
+      <li><a href="../pages/about.html">ABOUT</a></li>
+      <li><a href="../pages/contact.html">CONTACT</a></li>
+    </ul>
+    <label for="check" class="checkbtn"> 
+    <i class="fa fa-bars"></i> 
+    </label>
+  </nav>
          
         `;
   }
@@ -27,7 +33,10 @@ class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <section class="bottom-logo">
-  <div class=""><img src="../images/logo.svg" /></div>
+  <div class="">
+  <img class="logo" src="../images/logo.svg" />
+  <img class="logo-small" src="" />
+  </div>
 </section>
     <footer>
     <p class="copyright">© Copyright PanEcology 2023</p>
