@@ -1,7 +1,7 @@
 # GeorgeNavarre.github.io
 # 🌎 PanEcology: Interactive Eco-Mapping Project 🌍
 
-![PanEcology Logo](logo.svg)
+![PanEcology Logo](./images/logo.svg)
 
 ## Table of Contents
 - [About](#about)
