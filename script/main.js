@@ -2,9 +2,9 @@ class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
                     
-    <nav class="sticky">
+    <nav id="navbar" class="sticky">
     <a href="../index.html">
-      <img class="logo" src="../images/logo.svg" alt="Logo" />
+      <img class="logo" src="../images/logo-cropped.svg" alt="Logo" />
       <img class="logo-small" src=""/>
     </a>
     <input type="checkbox" id="check" />
@@ -22,7 +22,7 @@ class MyHeader extends HTMLElement {
     <i class="fa fa-bars"></i> 
     </label>
   </nav>
-         
+  
         `;
   }
 }
@@ -85,3 +85,13 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define("my-footer", MyFooter);
+
+document.addEventListener("scroll", () => {
+  const header = document.querySelector("nav");
+
+  if (window.scrollY > 100) {
+    header.classList.add("scroll");
+  } else {
+    header.classList.remove("scroll");
+  }
+});
