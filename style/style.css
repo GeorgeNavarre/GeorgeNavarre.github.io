@@ -49,13 +49,13 @@ nav.scroll {
   opacity: 0.98;
 }
 
-/* #nav-bg {
+#nav-bg {
   background-color: #ffe4a8;
   z-index: 98;
   height: 100px;
   margin-top: -115px;
 }
- */
+
 .logo,
 .logo-small {
   height: 100px;
