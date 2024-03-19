@@ -3,15 +3,17 @@ class MyHeader extends HTMLElement {
     this.innerHTML = `
                     
     <nav id="navbar" class="sticky">
-    <a href="../index.html">
-      <img class="logo" src="../images/logo-cropped.svg" alt="Logo" />
-      <img class="logo-small" src=""/>
-    </a>
-    <input type="checkbox" id="check" />
-   
-    <div class="support-link">
-      <a href="../pages/support.html">Help Support Our Mission!</a>
-    </div>
+    <ul class="nav-left">
+      <a href="../index.html">
+        <img class="logo" src="../images/logo-cropped.svg" alt="Logo" />
+        <img class="logo-small" src=""/>
+      </a>
+      <input type="checkbox" id="check" />
+    
+      <div class="support-link">
+        <a href="../pages/support.html">Support Our Mission!</a>
+      </div>
+    </ul>
     <ul class="nav-buttons">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="../pages/map.html">Spatial Explorer</a></li>
