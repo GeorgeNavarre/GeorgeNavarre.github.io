@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="../script/main.js"></script>
+    <script defer src="../script/app.js"></script>
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -36,77 +38,97 @@
         ></video>
       </div>
       <div class="hero-text">
-        <h1>PanEcology</h1>
-        <p>
-          Making the neccessary information available so we can make good
-          decisions about the future of the planet.
-        </p>
-        <div class="hero-btn">
-          <a href="pages\about.html">How are we doing it?</a>
+        <h1>Pan<span class="accent">Ecology</span></h1>
+        <div class="hero-copy">
+            <span> Mapping resource extraction and its &nbsp;</span>
+            <span class="rotating-domains">
+               <span class="domain">ecological</span>
+               <span class="domain">community</span>
+               <span class="domain">economic</span>
+               <span class="domain">environmental</span>
+            </span> 
+            <span>&nbsp;&nbsp;footprint.</span>
         </div>
-      </div>
-    </section>
-    <div class="boxes-header">
-      <h1>What we're up to</h1>
-    </div>
-    <section class="boxes">
-      <div class="box celeste">
-        <h2>Spatial Explorer</h2>
-        <p>
-          Explore extraction projects and their ecological and societal impacts
-          in our Spatial Explorer. Data is organized by our Knowledge Graph and
-          supplied to you in this easy-to-use format.
-        </p>
-      </div>
-      <div class="box-image">
-        <img src="images/Terrestrial_ecoregions_USA_CAN_MEX.svg.png" />
-      </div>
-
-      <div class="box-image glass">
-        <img src="images/search-icon-png-9985.png" alt="" />
-      </div>
-
-      <div class="box yellow">
-        <h2>Natural Language Search</h2>
-        <p>
-          Ask a question about Ecology in natural language! We’ll let you know
-          if we can’t answer it quite yet.
-        </p>
-        <div class="search">
-          <input type="text" placeholder="Ask a question" />
-          <div class="button-div">
-            <a href="#" class="view-map-btn">View Map</a>
-            <a href="#" class="view-km-btn">View KM</a>
+        <div class="button-div">
+          <div class="hero-btn">
+            <a href="pages\about.html">How are we doing it?</a>
+          </div>
+          <div class="hero-btn">
+            <a href="http://ecoinfowiki.info/">Browse the wiki</a>
           </div>
         </div>
-      </div>
-
-      <div class="box teal">
-        <h2>Knowledge Manager</h2>
-        <p>
-          Browse our Knowledge Graph directly through PanEcology’s Knowledge
-          Manager and help us start making new connections!
-        </p>
-      </div>
-
-      <div class="box-image">
-        <img
-          src="images/knowledge-graph-human-phenotype-ontology-science-point-bottom-view-a3fd72d703927739dfebd695a42cfbd7.png"
-        />
-      </div>
-
-      <div class="box-image space"></div>
-
-      <div class="box purple">
-        <h2>Game Development</h2>
-        <p>
-          We are also making games and simulations! Click below to see where
-          we’re at in the process and sign up for early access when they are
-          ready!
-        </p>
-        <a class="game-btn" href="#">SEE OUR GAMES</a>
+        <div class="arrow-div">
+          <i class="fa-solid fa-arrow-down"></i>
+        <div>
       </div>
     </section>
+    <section class="intro-section flex-grid">
+    <div class="row">
+      <div class="column test"></div>
+      <div class = "column hidden">
+          <h1 class="content-text">
+            PanEcology is an ecology information company, making available <em>crucial</em> information about resource
+            extraction and its <em>environmental, social, and economic effects.</em>
+          </h1>
+      </div>
+      <div class="column hidden">
+        <img class="hidden" src="../images/logo-cropped.svg" alt="Logo" />
+      </div>
+      <div class="column test"></div>
+    </div>
+    </section>
+    <section class="flex-grid">
+      <div class="row quality">
+        <div class="column test"></div>
+        <div class="column test hidden">
+          <div class = "content-text circle">
+            <h1>
+              Worker owned,<br/> driven by <em>integrity</em>.
+            </h1>
+         </div>
+        </div>
+        <div class="column test">
+          <p>
+            PanEcology ensures only the highest quality, well-cited data - free from special interests and outside influence.
+          </p>
+        </div>
+        <div class="column test"></div>
+      </div>
+      <div class="row footprint">
+        <div class="column test one" ></div>
+        <div class="column hidden phone-text test two">
+          <h1>
+            We are quantifying the ecological footprint of the technology we use every day, and helping to explore more sustainable extraction methods. 
+          </h1>
+        </div>
+        <div class="column test three">
+          <div class="circle"></div>
+          <div class="img-div phone" >
+                <video
+                autoplay
+                loop
+                muted
+                plays-inline
+                class="hero-vid phone-vid" 
+                id = "v0"
+                src="videos\Phone Elements_1.webm"
+                type="video/webm"
+              ></video>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section class="vid">
+      <div class="holder">
+         <video class="scroll-video"src="videos\Step One.mp4" autoplay muted loop playsinline></video>
+         <div class="step-heading">
+          <h1>Step 1</h1>
+          <p>Create a Robust Database</p>
+        </div>
+     </div>
+     
+    </section>
+    
     <my-footer></my-footer>
   </body>
 </html>
