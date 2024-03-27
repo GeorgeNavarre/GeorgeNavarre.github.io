@@ -500,38 +500,30 @@ nav.scroll li a {
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 25px;
-  margin-top: -50px;
+  margin-top: -35px;
   height: 300px;
 }
 .row {
   display: flex;
   flex-direction: row;
-  /* height: 450px; */
   margin: auto;
-  align-content: space-around;
-  /* align-items: center; */
+  align-items: center;
+  justify-content: space-around;
 }
 
 .column {
   flex: 1;
   display: flex;
   height: 100%;
-  margin: 1px;
   position: relative;
   flex-direction: column;
   align-items: center;
-  align-content: space-around;
+  justify-content: space-between;
 }
 
 .intro-section p {
   font-size: 30px;
 }
-
-/* .test {
-  background-color: salmon;
-  border-color: #333;
-  border-width: 5px;
-} */
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .frosted-glass {
@@ -539,6 +531,16 @@ nav.scroll li a {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
   }
+}
+
+.card-style-2 {
+  /* background-color: #fadfa5; */
+  color: #333;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 25px;
+  margin-top: -40px;
+  height: 400px;
 }
 
 .column img {
@@ -657,22 +659,42 @@ cite:before {
 }
 
 .diagram-section {
-  margin-top: -30px;
+  height: 400px;
 }
 
-.diagram-section .column {
+.diagram-section .row .column {
   height: 300px;
-  padding: 25px;
-  padding: 0.35em 75px;
+  flex: 1;
+}
+
+.diagram-text {
+  max-width: 500px;
+}
+
+.diagram-text h1 {
+  font-size: 25px;
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.diagram-section p {
+  font-family: "Libre Franklin", serif;
+  font-style: normal;
+  font-size: large;
+  width: 90%;
+  padding: 7px;
+  margin-left: -3px;
+  flex: 4;
+}
+
+.diagram-section p em {
+  font-style: normal;
+  font-weight: 700;
 }
 
 .diagram-section i {
   color: #381c50;
   font-size: 200px;
-}
-
-.diagram-section div {
-  margin: auto;
 }
 
 .hidden {
@@ -725,9 +747,16 @@ cite:before {
   transition-delay: 100ms;
 }
 
-.footprint {
-  max-height: 400px;
+.show:nth-child(3) {
+  transition-delay: 300ms;
 }
+
+.show:nth-child(4) {
+  transition-delay: 400ms;
+}
+/* .footprint {
+  max-height: 400px;
+} */
 
 .one {
   flex: 0.75;
@@ -750,7 +779,7 @@ cite:before {
 
 .phone {
   display: flex;
-  left: 0;
+  /* left: 0; */
   width: 700px;
   height: 100%;
 }
