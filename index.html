@@ -26,7 +26,28 @@
   </head>
 
   <body>
-    <my-header> </my-header>
+    <nav id="navbar" class="navbar sticky">
+      <ul class="nav-left align-items-center">
+        <a href="../index.html">
+          <img class="logo" src="../images/logo-cropped.svg" alt="Logo" />
+          <img class="logo-small" src="" />
+        </a>
+        <input type="checkbox" id="check" />
+
+        <div class="support-link">
+          <a class="btn" href="../pages/support.html">Support Our Mission!</a>
+        </div>
+      </ul>
+      <ul class="nav-buttons">
+        <li><a class="btn" href="../index.html">HOME</a></li>
+        <li><a class="btn" href="../pages/map.html">Spatial Explorer</a></li>
+        <li><a class="btn" href="../pages/about.html">ABOUT</a></li>
+        <li><a class="btn" href="../pages/contact.html">CONTACT</a></li>
+      </ul>
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+    </nav>
 
     <section class="hero-container">
       <div class="img-div">
@@ -69,17 +90,17 @@
 
     <section class="diagram-section flex-grid frosted-glass">
       <div class="row">
-        <div class="column test three hidden">
-          <div class="circle"></div>
+        <div class="column three hidden">
+          <!-- <div class="circle"></div> -->
           <div class="img-div phone">
             <video
               autoplay
               loop
               muted
               plays-inline
-              class="hero-vid phone-vid"
+              class="hero-vid diagram phone-vid"
               id="v0"
-              src="videos\Phone Elements_1.webm"
+              src="videos\ven diagram.webm"
               type="video/webm"
             ></video>
           </div>
@@ -97,9 +118,9 @@
               immediate context.
             </p>
             <p class="hidden">
-              <em>However, each domain</em> presents unique challenges,
-              language, and standards - and solutions must be
-              <em>specific and actionable</em>.
+              <em>Accurate and actionable information</em> is crucial to
+              maintaining economically benficial extractive activity without
+              leaving behind our <em>environment and communities</em>.
             </p>
           </div>
         </div>

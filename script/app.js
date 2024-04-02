@@ -18,9 +18,9 @@ vid = document.querySelector(".phone-vid");
 vid.pause();
 
 const scroll = () => {
-  const total = window.innerHeight * 0.4;
+  const total = window.innerHeight;
   const location = section.getBoundingClientRect();
-  const start = location.y + window.scrollY - window.innerHeight * 0.6;
+  const start = location.y + window.scrollY - window.innerHeight;
 
   const distance = window.scrollY - start;
 

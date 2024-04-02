@@ -3,7 +3,7 @@ class MyHeader extends HTMLElement {
     this.innerHTML = `
                     
     <nav id="navbar" class="sticky">
-    <ul class="nav-left">
+    <ul class="nav-left align-items-center">
       <a href="../index.html">
         <img class="logo" src="../images/logo-cropped.svg" alt="Logo" />
         <img class="logo-small" src=""/>
