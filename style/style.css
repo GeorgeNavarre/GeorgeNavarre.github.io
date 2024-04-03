@@ -277,7 +277,6 @@ nav.scroll li a {
   color: white;
   max-width: 100%;
   max-height: 100vh;
-  padding-bottom: 10px;
   margin-top: -105px;
   overflow: hidden;
 }
@@ -321,7 +320,7 @@ nav.scroll li a {
 }
 
 .hero-text h1 {
-  font-size: 100px;
+  font-size: 7rem;
   /* padding-bottom: 10px; */
   color: inherit;
 }
@@ -405,7 +404,6 @@ nav.scroll li a {
   filter: brightness(60%) drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
   width: 100%;
   padding: none;
-  margin-top: -5px;
   position: relative;
   margin-top: -110px;
   max-width: 100%;
@@ -419,7 +417,7 @@ nav.scroll li a {
 }
 
 .img-div-b {
-  max-height: 600px;
+  max-height: 100vh;
   width: 100%;
   overflow: hidden;
   margin-top: -115px;
@@ -431,13 +429,13 @@ nav.scroll li a {
 
 .hero-btn {
   border-width: 1px;
-  margin-left: 23px;
-  margin-right: 25px;
-  padding: 10px;
+  margin-left: 1.5rem;
+  margin-right: 1rem;
+  padding: .5rem;
   border-color: var(--clr-light);
   border-style: solid;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -449,7 +447,7 @@ nav.scroll li a {
 .hero-btn a {
   font-family: var(--font-primary);
   text-transform: uppercase !important;
-  font-size: 25px;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--clr-light);
 }
@@ -462,14 +460,6 @@ nav.scroll li a {
   text-decoration: none;
 }
 
-@keyframes bounce {
-  50% {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 
 /* Style the content section */
 
@@ -480,8 +470,8 @@ nav.scroll li a {
 .frosted-glass {
   background-color: rgba(255, 255, 255, 0.95);
   color: #333;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3rem;
+  margin-right: 3rem;
   border-radius: 25px;
   
   /* height: 300px;  */
@@ -500,7 +490,7 @@ nav.scroll li a {
   margin: auto;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 1.5em;
   width: 90vw;
 }
 
@@ -513,7 +503,7 @@ nav.scroll li a {
 }
 
 .diagram-section{
-  margin-top: -35px; 
+  margin-top: -2em; 
 }
 
 .diagram-section .row .column {
@@ -524,9 +514,9 @@ nav.scroll li a {
 }
 
 .diagram-text h1 {
-  font-size: 25px;
+  font-size: 1.5rem;
   flex: 1;
-  padding-bottom: 30px;
+  padding-bottom: 1em;
   color: var(--clr-dark);
 }
 
@@ -534,9 +524,10 @@ nav.scroll li a {
   font-family: "Libre Franklin", serif;
   font-style: normal;
   font-size: large;
-  width: 90%;
-  padding: 7px;
-  margin-left: -3px;
+  width: 80%;
+  padding: .25em;
+  padding-left: 0;
+  /* margin-left: -1em; */
   flex: 4;
 }
 
@@ -545,10 +536,6 @@ nav.scroll li a {
   font-weight: 700;
 }
 
-.diagram-section i {
-  color: var(--clr-dark);
-  font-size: 200px;
-}
 .diagram {
   height: 50vh;
   width: auto;
@@ -576,7 +563,7 @@ nav.scroll li a {
 /* quotes section */
 
 .quotes{
-  margin-top: -10px;
+  /* margin-top: 1em; */
   /* background-image: 
   linear-gradient(
     rgba(85, 138, 132, .2),
@@ -599,9 +586,8 @@ nav.scroll li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  /* padding: 10px; */
+  margin-left: 2em;
+  margin-right: 2em;
   height: 35vh;
   position: relative;
 }
