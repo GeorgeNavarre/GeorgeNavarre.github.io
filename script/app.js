@@ -12,8 +12,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-section = document.querySelector(".phone");
-vid = document.querySelector(".phone-vid");
+section = document.querySelector(".vid-div");
+vid = document.querySelector(".vid");
 
 vid.pause();
 

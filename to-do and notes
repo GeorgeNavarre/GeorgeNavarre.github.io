@@ -6,6 +6,13 @@ Headers - Libre Franklin
 Accent - Permananet Marker
 Main Body - Libre Baskerville
 
+--font-primary: "Libre Franklin", sans-serif;
+--font-quotes: "Libre Franklin", sans-serif;
+
+--clr-purple: #381c50;
+--clr-teal: #71b9b1;
+--clr-tan: #ffecc2;
+
 - help support out mission vs
 - add natural language search experience
 
