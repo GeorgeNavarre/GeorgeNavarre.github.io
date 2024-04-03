@@ -5,7 +5,7 @@
   --font-primary: "Libre Franklin", sans-serif;
   --font-secondary: "Libre Baskerville" serif;
   --font-quotes: "Libre Franklin", sans-serif;
-
+}
 /* Set default font and box-sizing */
 * {
   font-family: "Libre Baskerville", sans-serif;
@@ -350,11 +350,11 @@ nav.scroll li a {
   font-family: "Libre Franklin", serif;
   font-size: 29px;
   position: relative;
-  animation: animation 9s ease infinite;
+  animation: roll 9s ease infinite;
   font-weight: 600;
 }
 
-@keyframes animation {
+@keyframes roll {
   0%,
   100% {
     top: 0;
@@ -379,14 +379,6 @@ nav.scroll li a {
   94% {
     top: -100px;
     width: 135px;
-    /* }
-  75% {
-    top: -150px;
-    width: 200px;
-  }
-  95% {
-    top: -150px;
-    width: 200px;*/
   }
 }
 
@@ -431,7 +423,7 @@ nav.scroll li a {
   border-width: 1px;
   margin-left: 1.5rem;
   margin-right: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-color: var(--clr-light);
   border-style: solid;
   border-radius: 5px;
@@ -460,7 +452,6 @@ nav.scroll li a {
   text-decoration: none;
 }
 
-
 /* Style the content section */
 
 .flex-grid {
@@ -473,7 +464,7 @@ nav.scroll li a {
   margin-left: 3rem;
   margin-right: 3rem;
   border-radius: 25px;
-  
+
   /* height: 300px;  */
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -502,14 +493,14 @@ nav.scroll li a {
   justify-content: space-between;
 }
 
-.diagram-section{
-  margin-top: -2em; 
+.diagram-section {
+  margin-top: -2em;
 }
 
 .diagram-section .row .column {
   height: 90%;
   flex: 1;
-  
+
   /* background-color: #06bde3; */
 }
 
@@ -525,7 +516,7 @@ nav.scroll li a {
   font-style: normal;
   font-size: large;
   width: 80%;
-  padding: .25em;
+  padding: 0.25em;
   padding-left: 0;
   /* margin-left: -1em; */
   flex: 4;
@@ -562,16 +553,16 @@ nav.scroll li a {
 
 /* quotes section */
 
-.quotes{
+.quotes {
   /* margin-top: 1em; */
   /* background-image: 
-  linear-gradient(
-    rgba(85, 138, 132, .2),
-    rgb(113, 185, 177, .2),
-    rgba(85, 138, 132, .2)
-  ), 
-   linear-gradient(rgba(255,255,255,.5),rgba()),
-    url(../images/mountain.png); */
+linear-gradient(
+  rgba(85, 138, 132, .2),
+  rgb(113, 185, 177, .2),
+  rgba(85, 138, 132, .2)
+), 
+  linear-gradient(rgba(255,255,255,.5),rgba()),
+  url(../images/mountain.png); */
 
   background-repeat: none;
 }
@@ -674,11 +665,11 @@ cite:before {
   background-color: var(--clr-light);
   height: 15vh;
   background-image: linear-gradient(
-    rgba(85, 138, 132, .2),
-    rgb(113, 185, 177, .2),
-    rgba(85, 138, 132, .2)
-  ), 
-   linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+      rgba(85, 138, 132, 0.2),
+      rgb(113, 185, 177, 0.2),
+      rgba(85, 138, 132, 0.2)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/mountain.png);
   background-position: 0%;
 }
@@ -687,7 +678,6 @@ cite:before {
   font-size: 2rem;
   z-index: 1000;
 }
-
 
 /* not here yet */
 .quality {
@@ -728,9 +718,6 @@ cite:before {
 .show:nth-child(4) {
   transition-delay: 400ms;
 }
-/* .footprint {
-  max-height: 400px;
-} */
 
 .one {
   flex: 0.75;
