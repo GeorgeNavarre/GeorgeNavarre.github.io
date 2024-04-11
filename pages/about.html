@@ -21,24 +21,52 @@
   </head>
 
   <body>
-    <my-header> </my-header>
-
-    <section class="hero-container-b">
-      <div class="img-div-b">
+    <nav id="navbar" class="navbar sticky" aria-label="primary menu"></nav>
+    <!-- header -->
+    <section class="header-section">
+      <div class="header-img-div">
         <img
-          class="hero-img"
+          class="header-img"
           src="..\images\mountain.png"
           alt="Map of ecoregions of the US"
         />
-      </div>
-      <div class="hero-text hero-text-b">
-        <h1>About Us</h1>
-        <p>Meet the team and learn about our mission!</p>
+        <div class="header-text">
+          <h1>About</h1>
+          <p>What are we doing and how are we doing it?</p>
+        </div>
       </div>
     </section>
 
     <section class="overview">
-      <div class="overview-div">
+      <div class="overview-div frosted-glass">
+        <div class="video-text-div">
+          <h1 class="">Robust and Intuitive Research Tools for All</h1>
+          <p class="">
+            First, and perhaps most importantly, we are assembling a
+            comprehensive database of all available data relating to extractive
+            activities and their effects upon the surrounding ecological,
+            economic, and communal surroundings.
+          </p>
+          <p class="">
+            Of course, that then necessitates access to that data, so we are
+            developing user-friendly navigation tools. No need to learn any
+            programming or query languages -
+            <em>if you can use a computer you can access our data!</em>
+          </p>
+          <p class="">
+            Ask a plain English question in our natural language query tool and
+            you'll be routed to all relevant information in our database,
+            complete with citations and - where possible - links to the full
+            source text.
+          </p>
+          <p class="">
+            If it's a region you're interested in, you can browse the spatial
+            explorer and view by municipality, ecoregion, and many other preset
+            boundaries. Or you can draw your own polygons and customize your
+            data that way.
+          </p>
+          <p class="prompt">Watch the video or scroll to learn more</p>
+        </div>
         <div class="video-div">
           <video
             class="intro-video"
@@ -56,13 +84,6 @@
           <div class="video-btn">
             <a href="">Click to watch a video</a>
           </div>
-        </div>
-
-        <div>
-          <p class="intro-text">
-            Check out this video to learn a bit about who we are, what we do,
-            and how we do it!
-          </p>
         </div>
       </div>
     </section>
@@ -111,6 +132,6 @@
         </li>
       </ul>
     </section>
-    <my-footer></my-footer>
+    <section class="footer"></section>
   </body>
 </html>

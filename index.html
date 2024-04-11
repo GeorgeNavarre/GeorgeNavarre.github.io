@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PanEcology Home</title>
-    <script
-      src="https://kit.fontawesome.com/7f29f39150.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="../script/main.js"></script>
-    <script defer src="../script/app.js"></script>
+
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,11 +13,14 @@
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <my-header> </my-header>
+    <nav id="navbar" class="navbar sticky" aria-label="primary menu"></nav>
 
     <section class="hero-container">
       <div class="img-div">
@@ -31,104 +28,208 @@
           autoplay
           loop
           muted
-          plays-inline
+          playsinline
           class="hero-vid"
           src="videos\Hero Video.mp4"
-          type="vide/mp4"
+          type="video/mp4"
         ></video>
       </div>
       <div class="hero-text">
-        <h1>Pan<span class="accent">Ecology</span></h1>
+        <h1>
+          Pan<span class="accent">Ecology</span>
+          <div class="hero-copy-des">An ecology information collaboration</div>
+        </h1>
         <div class="hero-copy">
-            <span> Mapping resource extraction and its &nbsp;</span>
-            <span class="rotating-domains">
-               <span class="domain">ecological</span>
-               <span class="domain">community</span>
-               <span class="domain">economic</span>
-               <span class="domain">environmental</span>
-            </span> 
-            <span>&nbsp;&nbsp;footprint.</span>
+          <span> Mapping resource extraction and its &nbsp;</span>
+          <span class="rotating-domains">
+            <span class="domain">ecological</span>
+            <span class="domain">community</span>
+            <span class="domain">economic</span>
+          </span>
+          <span>&nbsp;&nbsp;footprint.</span>
         </div>
         <div class="button-div">
           <div class="hero-btn">
             <a href="pages\about.html">How are we doing it?</a>
           </div>
           <div class="hero-btn">
-            <a href="https://ecoinfowiki.info/index.php?title=North_America">Browse the wiki</a>
+            <a href="https://ecoinfowiki.info/index.php?title=North_America"
+              >Browse the wiki</a
+            >
           </div>
         </div>
-        <div class="arrow-div">
-          <i class="fa-solid fa-arrow-down"></i>
-        <div>
       </div>
     </section>
-    <section class="intro-section flex-grid">
-    <div class="row">
-      <div class="column test"></div>
-      <div class = "column hidden">
-          <h1 class="content-text">
-            PanEcology is an ecology information company, making available <em>crucial</em> information about resource
-            extraction and its <em>environmental, social, and economic effects.</em>
-          </h1>
-      </div>
-      <div class="column hidden">
-        <img class="hidden" src="../images/logo-cropped.svg" alt="Logo" />
-      </div>
-      <div class="column test"></div>
-    </div>
-    </section>
-    <section class="flex-grid">
-      <div class="row quality">
-        <div class="column test"></div>
-        <div class="column test hidden">
-          <div class = "content-text circle">
-            <h1>
-              Worker owned,<br/> driven by <em>integrity</em>.
-            </h1>
-         </div>
+
+    <section class="diagram-section flex-grid frosted-glass">
+      <div class="row">
+        <div class="column hidden">
+          <!-- <div class="circle"></div> -->
+          <div class="vid-div">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              class="diagram vid"
+              id="v0"
+              src="videos\ven diagram.webm"
+              type="video/webm"
+            ></video>
+          </div>
         </div>
-        <div class="column test">
+        <div class="column diagram-text test">
+          <div>
+            <h1 class="hidden">A HOLISTIC YET SPECIFIC APPROACH</h1>
+            <p class="hidden">
+              <em>Ecology, Community, and Economy</em> are often conceived of as
+              separate domains. But in reality, they are
+              <em>nested systems</em>.
+            </p>
+            <p class="hidden">
+              <em>When we take action in one domain,</em> it doesn't occur in
+              isolation. Our actions have effects that extend beyond the
+              immediate context.
+            </p>
+            <p class="hidden">
+              <em>Accurate and actionable information</em> is crucial to
+              maintaining economically and socially beneficial extractive
+              activity without leaving behind our
+              <em>environment and communities</em>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex-grid quotes">
+      <div class="row quote-row">
+        <div class="hidden content-text quote-div">
+          <blockquote class="">
+            <h1 class="blockquote-em">>90%</h1>
+            of biodiversity loss and water stress are caused by resource
+            extraction and processing.
+            <cite>UN Global Resource Outlook 2019</cite>
+          </blockquote>
+          <i class="fa-solid fa-plant-wilt icon-background"></i>
+        </div>
+        <div class="hidden content-text quote-div">
+          <blockquote class="">
+            ...material demand is expected to increase in the coming decades.
+            <cite>UN Global Resource Outlook 2024</cite>
+          </blockquote>
+          <i class="fa-solid fa-chart-line icon-background"></i>
+        </div>
+        <div class="hidden content-text">
+          <p class="">
+            We need "<em>...transparent</em> and
+            <em>easily actionable</em> information".
+            <cite>UN Global Resource Outlook 2024</cite>
+          </p>
+          <i class="fa-solid fa-circle-info icon-background"></i>
+        </div>
+      </div>
+      <div class="row quote-row">
+        <div class="hidden content-text quote-div">
+          <blockquote class="">
+            ...the average Environmental Impact Statement completion time was
+            <h1 class="blockquote-em">4.5 years</h1>
+            <cite>CEQ EIS Timeline Report</cite>
+          </blockquote>
+          <i class="fa-solid fa-calendar icon-background"></i>
+        </div>
+        <div class="hidden content-text quote-div">
+          <blockquote class="">
+            The period from publication of [a Notice of Intent] to the notice of
+            availability of the draft EIS took on average
+            <h1 class="blockquote-em">58.4%</h1>
+            of the total time.
+            <cite>CEQ EIS Timeline Report</cite>
+          </blockquote>
+          <i class="fa-solid fa-percent icon-background"></i>
+        </div>
+        <div class="content-text hidden">
+          <p class="">
+            This means that the <em>largest portion</em> of the EIS permitting
+            process is spent in the <em>preliminary phase</em>. This is not even
+            to mention other permitting processes.
+          </p>
+          <i class="fa-solid fa-chart-pie icon-background"></i>
+        </div>
+      </div>
+    </section>
+    <section class="mission">
+      <h1>
+        PanEcology is a worker-owned ecology information company, making
+        available
+        <em>crucial</em> information about resource extraction and its
+        <em>environmental, social, and economic effects.</em>
+      </h1>
+      <h1>
+        We envision a world where anyone can access transparent and truthful
+        information about the decisions that affect them the most.
+      </h1>
+    </section>
+    <section class="pillars-section">
+      <div class="row quote-row pillars-row">
+        <div class="hidden pillars">
+          <h1>HIGH QUALITY</h1>
           <p>
-            PanEcology ensures only the highest quality, well-cited data - free from special interests and outside influence.
+            PanEcology ensures only the highest quality, well-cited data.
+            Citations are clear and robust, and sources are transparent and
+            highly reliable.
           </p>
         </div>
-        <div class="column test"></div>
-      </div>
-      <div class="row footprint">
-        <div class="column test one" ></div>
-        <div class="column hidden phone-text test two">
-          <h1>
-            We are quantifying the ecological footprint of the technology we use every day, and helping to explore more sustainable extraction methods. 
-          </h1>
+        <div class="hidden pillars">
+          <h1>INDEPENDENT</h1>
+          <p>
+            PanEcology is worker-owned and free from special interest influence.
+            What data is available and how it is made available is not now and
+            will never be dependent on moneyed parties.
+          </p>
         </div>
-        <div class="column test three">
-          <div class="circle"></div>
-          <div class="img-div phone" >
-                <video
-                autoplay
-                loop
-                muted
-                plays-inline
-                class="hero-vid phone-vid" 
-                id = "v0"
-                src="videos\Phone Elements_1.webm"
-                type="video/webm"
-              ></video>
-          </div> 
+        <div class="hidden pillars">
+          <h1>OPEN</h1>
+          <p>
+            Our database of raw information is free to access for everyone.
+            Clients may hire analysis services for a fee.
+          </p>
+        </div>
+        <div class="hidden pillars">
+          <h1>NEUTRAL</h1>
+          <p>We are NOT an advocacy group.</p>
+          <p>
+            PanEcology does neither advocate any policy nor endorse or oppose
+            any project.
+          </p>
+          <blockquote>"Just the facts ma'am"</blockquote>
         </div>
       </div>
     </section>
-    <section class="vid">
-      <div class="holder">
-         <video class="scroll-video"src="videos\Step One.mp4" autoplay muted loop playsinline></video>
-         <div class="step-heading">
-          <h1>Step 1</h1>
-          <p>Create a Robust Database</p>
-        </div>
-     </div>
-     
+    <section class="cta">
+      <div class="support-link cta-button">
+        <a class="btn" href="../pages/about.html">How are we doing it?</a>
+      </div>
+      <div class="support-link cta-button">
+        <a class="btn" href="../pages/map.html">Explore the map</a>
+      </div>
+      <div class="support-link cta-button">
+        <a class="btn" href="../pages/knowledge-manager.html">Ask a question</a>
+      </div>
+      <div class="support-link cta-button">
+        <a
+          class="btn"
+          href="https://ecoinfowiki.info/index.php?title=North_America"
+          >Browse the wiki</a
+        >
+      </div>
     </section>
-    
-    <my-footer></my-footer>
+
+    <section class="footer"></section>
+    <script
+      src="https://kit.fontawesome.com/7f29f39150.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../script/main.js"></script>
+    <script defer src="../script/app.js"></script>
   </body>
 </html>
