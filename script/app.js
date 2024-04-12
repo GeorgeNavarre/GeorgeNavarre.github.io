@@ -1,3 +1,4 @@
+// reveal hidden elements
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -12,34 +13,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-section = document.querySelector(".vid-div");
-vid = document.querySelector(".vid");
-
-vid.pause();
-
-const scroll = () => {
-  const total = window.innerHeight;
-  const location = section.getBoundingClientRect();
-  const start = location.y + window.scrollY - window.innerHeight;
-
-  const distance = window.scrollY - start;
-
-  let percentage = distance / total;
-
-  percentage = Math.max(0, percentage);
-  percentage = Math.min(percentage, 1);
-  console.log("Distance " + distance);
-  console.log("Total " + total);
-  console.log(percentage + "%");
-
-  if (vid.duration > 0) {
-    vid.currentTime = vid.duration * percentage;
-  }
-};
-
-scroll();
-window.addEventListener("scroll", scroll);
-
+//scrub full videos on scroll
 const scrollSection = document.querySelector("section.vid");
 const scrollVid = document.querySelector(".scroll-video");
 
@@ -60,3 +34,24 @@ const vidScroll = () => {
 
 vidScroll();
 window.addEventListener("scroll", vidScroll);
+
+const scrollSection2 = document.querySelector("section.vid2");
+const scrollVid2 = document.querySelector(".scroll-video2");
+
+scrollVid2.pause();
+
+const vidScroll2 = () => {
+  const distance = window.scrollY - scrollSection2.offsetTop;
+  const total = scrollSection2.clientHeight - window.innerHeight;
+
+  let percentage = distance / total;
+  percentage = Math.max(0, percentage);
+  percentage = Math.min(percentage, 1);
+
+  if (scrollVid2.duration > 0) {
+    scrollVid2.currentTime = scrollVid2.duration * percentage;
+  }
+};
+
+vidScroll2();
+window.addEventListener("scroll", vidScroll2);
