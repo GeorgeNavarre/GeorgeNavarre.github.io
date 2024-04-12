@@ -18,7 +18,10 @@ fetch("/header.html")
     const navLinkEls = document.querySelectorAll(".nav_link");
     const windowPathname = window.location.pathname;
     navLinkEls.forEach((navLinkEl) => {
-      if (navLinkEl.href.includes(windowPathname)) {
+      console.log(navLinkEl);
+      if (windowPathname == "/") {
+        navLinkEls[0].classList.add("active");
+      } else if (navLinkEl.href.includes(windowPathname)) {
         navLinkEl.classList.add("active");
       }
     });
