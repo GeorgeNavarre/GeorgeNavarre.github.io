@@ -5,6 +5,13 @@
   --font-primary: "Libre Franklin", sans-serif;
   --font-secondary: "Libre Baskerville", serif;
   --font-quotes: "Libre Franklin", sans-serif;
+
+  --fs-xxl: clamp(3rem, 9vw, 7rem);
+  --fs-xl: clamp(2rem, 4.25vw, 4rem);
+  --fs-700: clamp(1rem, 2vw, 1.75rem);
+  --fs-600: clamp(0.75rem, 1.6vw, 1.5rem);
+  --fs-500: clamp(0.7rem, 1.25vw, 1.25rem);
+  --fs-400: clamp(0.75rem, 1vw, 1rem);
 }
 /* Set default font and box-sizing */
 * {
@@ -47,17 +54,14 @@ body {
 }
 
 nav {
-  /* background-color: var(--clr-light); */
-  /* background-image: linear-gradient(-90deg, #558a84, #71b9b1, #558a84); */
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  /* font-size: 20px; */
+
   color: white;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-  /* margin-bottom: 5px; */
+
   position: sticky;
   top: 0;
   width: 100%;
@@ -87,7 +91,7 @@ nav.scroll {
 }
 
 .checkbtn {
-  font-size: 50px;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: var(--clr-light);
   float: right;
   line-height: 80px;
@@ -106,7 +110,6 @@ nav.scroll {
   margin-left: 50px;
   position: relative;
   z-index: 100;
-  font-size: 1.1rem;
 }
 
 .support-link a {
@@ -117,7 +120,7 @@ nav.scroll {
   transition: 0.1s;
   /* transition: color 0.4s ease-in-out; */
   font-family: var(--font-primary);
-  font-size: 1.1rem;
+  font-size: var(--fs-500);
   text-decoration: none;
   text-align: center;
   color: var(--clr-light);
@@ -160,7 +163,7 @@ nav.scroll {
   transition: 0.1s ease-in-out;
   /* transition: color 0.4s ease-in-out; */
   font-family: var(--font-primary);
-  font-size: 1.1rem;
+  font-size: var(--fs-500);
   text-decoration: none;
   text-align: center;
   color: var(--clr-light);
@@ -189,11 +192,9 @@ nav.scroll li a {
 
 @media (max-width: 1230px) {
   nav img {
-    /* font-size: 30px; */
     padding-left: 20px;
   }
   nav {
-    /* font-size: 16px; */
     align-items: center;
   }
   .support-link {
@@ -202,6 +203,22 @@ nav.scroll li a {
 }
 
 @media (max-width: 955px) {
+  .button-div {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 5vh;
+  }
+
+  .hero-btn {
+    width: 40vw;
+  }
+
+  .search-div {
+    margin-left: 1rem;
+  }
+
   .checkbtn {
     display: flex;
     align-items: center;
@@ -211,13 +228,17 @@ nav.scroll li a {
   .checkbtn i {
     color: var(--clr-light);
     background: none;
-    height: 70px;
-    width: 70px;
+    height: clamp(3rem, 10vw, 4rem);
+    aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    background-color: var(--clr-dark);
   }
-
+  nav.scroll {
+    background: none;
+  }
   .checkbtn i:hover {
     color: var(--clr-light);
     background-color: var(--clr-dark);
@@ -227,49 +248,51 @@ nav.scroll li a {
     width: 100%;
     align-items: center;
   }
+
   .nav-buttons {
     position: fixed;
-    top: 160px;
+    top: 0;
     left: -1800px;
-    width: 100%;
-    height: 100vw;
-    background-color: var(--clr-light);
+    width: 100vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
-    padding-right: 0;
+    justify-content: center;
     transition: all 0.5s;
-    padding-top: 50px;
+    padding-top: 100px;
+    z-index: -1;
+    background-color: var(--clr-light);
   }
 
   .support-link {
-    position: fixed;
-    top: -100px;
-    max-width: none;
-    display: flex;
-    justify-content: center;
-    /* font-size: 30px; */
-    right: 0;
-    left: 0;
+    width: 40vw;
+    margin-left: 3vw;
   }
+
   .nav-buttons li {
     padding: none;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-buttons li a {
-    /* font-size: 30px; */
     padding: none;
+    max-height: 4rem;
+    width: 80vw;
+    margin-inline: auto;
+    color: var(--clr-dark);
   }
+
   #check:checked ~ .nav-buttons {
     left: 0;
   }
-  #check:checked ~ .checkbtn i {
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    scale: 110%;
-  }
-  #check:checked ~ .support-link {
-    top: 120px;
+
+  /* about page responsiveness */
+  .overview-div {
+    flex-direction: column;
   }
 }
 
@@ -285,16 +308,17 @@ nav.scroll li a {
   overflow: hidden;
 }
 
-.hero-container-b {
+/* .hero-container-b {
   background-color: var(--clr-light);
   position: relative;
   text-align: left;
   color: white;
   max-width: 100%;
+  max-height: 50vw;
   padding-bottom: 10px;
   z-index: 99;
   margin-top: -110px;
-}
+} */
 
 .hero-text {
   position: absolute;
@@ -303,11 +327,12 @@ nav.scroll li a {
   transform: translate(-50%, -35%);
   width: 75%;
   color: var(--clr-light);
+  font-size: var(--fs-600);
 }
 
 .hero-text h1 {
-  font-size: 7rem;
-  /* padding-bottom: 10px; */
+  font-size: var(--fs-xxl);
+
   color: inherit;
 }
 
@@ -316,18 +341,17 @@ nav.scroll li a {
   font-weight: 700;
   font-style: bold;
   color: var(--clr-light);
-  /* color: #71b9b1; */
 }
 
 .hero-copy-des {
   font-family: var(--font-primary);
   margin-top: -1em;
   margin-left: 0.5rem;
-  font-size: 1.5rem;
+  font-size: var(--fs-600);
 }
 
 .hero-copy {
-  font-size: 25px;
+  font-size: var(--fs-600);
   font-weight: 300;
   margin-left: 0.5rem;
   padding-bottom: 20px;
@@ -344,12 +368,13 @@ nav.scroll li a {
   height: 50px;
   line-height: 50px;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  width: auto;
 }
 
 .domain {
-  font-family: "Libre Franklin", serif;
-  font-size: 29px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-700);
   position: relative;
   animation: roll 9s ease infinite;
   font-weight: 600;
@@ -359,38 +384,36 @@ nav.scroll li a {
   0%,
   100% {
     top: 0;
-    width: 139px;
+    /* width: 139px; */
   }
   28% {
     top: 0;
-    width: 139px;
+    /* width: 139px; */
   }
   33% {
     top: -50px;
-    width: 160px;
+    /* width: 160px; */
   }
   61% {
     top: -50px;
-    width: 160px;
+    /* width: 160px; */
   }
   66% {
     top: -100px;
-    width: 135px;
+    /* width: 135px; */
   }
   94% {
     top: -100px;
-    width: 135px;
+    /* width: 135px; */
   }
 }
 
 .hero-vid {
   filter: brightness(70%) drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
   background-size: cover;
-  width: 100%;
   padding: none;
-  margin-top: -5px;
   position: relative;
-  margin-top: -110px;
+  /* margin-top: -110px; */
 }
 
 .hero-img {
@@ -411,6 +434,7 @@ nav.scroll li a {
 
 .button-div {
   display: flex;
+  max-height: 3.5rem;
 }
 
 .search-div {
@@ -428,21 +452,13 @@ nav.scroll li a {
   border: 2px solid var(--clr-light);
   border-radius: 50px;
   padding: 1rem 2rem;
-  width: 20rem;
+  width: clamp(10rem, 30vw, 20rem);
   color: var(--clr-dark);
   font-family: var(--font-primary);
-  font-size: 1em;
+  font-size: var(--fs-400);
   position: relative;
   transition: width 0.5s;
 }
-
-/* .search-div label {
-  position: absolute;
-  left: 10%;
-  color: var(--clr-dark);
-  font-family: var(--font-primary);
-  cursor: text;
-} */
 
 .search-div input:hover {
   border: 2.5px solid var(--clr-dark);
@@ -450,7 +466,7 @@ nav.scroll li a {
 
 .search-div input:focus {
   border: 2.5px solid var(--clr-dark);
-  width: 39rem;
+  width: clamp(15rem, 50vw, 40rem);
 }
 
 .search-div button {
@@ -485,7 +501,8 @@ nav.scroll li a {
   border-color: var(--clr-light);
   border-style: solid;
   border-radius: 5px;
-  max-width: 30rem;
+  max-width: 25rem;
+  min-width: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -497,7 +514,7 @@ nav.scroll li a {
 .hero-btn a {
   font-family: var(--font-primary);
   text-transform: uppercase !important;
-  font-size: 1.5rem;
+  font-size: var(--fs-500);
   text-decoration: none;
   color: var(--clr-light);
 }
@@ -568,7 +585,7 @@ nav.scroll li a {
 }
 
 .diagram-text h1 {
-  font-size: 1.5rem;
+  font-size: var(--fs-700);
   flex: 1;
   padding-bottom: 1em;
   color: var(--clr-dark);
@@ -577,7 +594,7 @@ nav.scroll li a {
 .diagram-section p {
   font-family: "Libre Franklin", serif;
   font-style: normal;
-  font-size: large;
+  font-size: var(--fs-500);
   width: 80%;
   padding: 0.25em;
   padding-left: 0;
@@ -592,7 +609,7 @@ nav.scroll li a {
 
 .diagram {
   height: 50vh;
-  width: auto;
+  width: 30rem;
 }
 
 .hidden {
@@ -617,23 +634,20 @@ nav.scroll li a {
 /* quotes section */
 
 .quotes {
-  margin-top: 1em;
-}
-
-.quote-row {
-  justify-content: center;
-  width: 80vwvw;
+  max-width: 80vw;
+  margin-inline: auto;
+  padding: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .content-text {
   font-family: var(--font-primary);
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2em;
-  margin-right: 2em;
-  height: 35vh;
+  min-height: 25vh;
   position: relative;
 }
 
@@ -650,7 +664,7 @@ nav.scroll li a {
 }
 blockquote {
   font-family: inherit;
-  font-size: 1em;
+  font-size: var(--fs-400);
   font-style: italic;
   padding: 0.35em 75px;
   line-height: 1.45;
@@ -660,7 +674,7 @@ blockquote {
 }
 .blockquote-em {
   font-family: inherit;
-  font-size: 4rem;
+  font-size: var(--fs-xl);
   line-height: 1;
   position: relative;
   color: var(--clr-dark);
@@ -703,7 +717,7 @@ cite:before {
 .content-text p {
   font-family: inherit;
   font-style: italic;
-  font-size: 1rem;
+  font-size: var(--fs-400);
   padding: 0.35em 75px;
 }
 
@@ -731,7 +745,7 @@ cite:before {
 }
 .mission h1 {
   color: inherit;
-  font-size: 2rem;
+  font-size: var(--fs-700);
   /* z-index: 1000; */
   padding: 1rem 2rem 1rem 2rem;
   text-align: center;
@@ -742,8 +756,7 @@ cite:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: -0.75rem; */
-  height: 20rem;
+  min-height: 20rem;
 }
 
 .pillars-row {
@@ -773,7 +786,7 @@ cite:before {
   padding-left: 2em;
   padding-right: 2em;
   text-align: start;
-  font-size: 1.125em;
+  font-size: var(--fs-400);
   margin: 0;
   text-wrap: pretty;
   font-family: inherit;
@@ -789,7 +802,7 @@ cite:before {
   justify-content: center;
   align-items: center;
   margin: 2em;
-  transform: scale(150%);
+  /* transform: scale(150%); */
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -851,12 +864,12 @@ section.vid div.vid-div {
 }
 
 section.vid div.step-heading h1 {
-  font-size: 100px;
+  font-size: var(--fs-xxl);
   color: var(--clr-dark);
 }
 
 section.vid div.step-heading p {
-  font-size: 25px;
+  font-size: var(--fs-600);
   color: var(--clr-dark);
 }
 
@@ -880,7 +893,7 @@ section.vid div.step-heading {
 }
 
 .header-img-div {
-  height: 50vh;
+  max-height: 50vh;
   width: 100%;
   overflow: hidden;
   margin-top: -115px;
@@ -902,16 +915,16 @@ section.vid div.step-heading {
 }
 
 .header-text h1 {
-  font-size: 4rem;
+  font-size: var(--fs-xl);
   /* padding-bottom: 10px; */
   color: inherit;
-  text-wrap: none;
+  white-space: nowrap;
 }
 
 .header-text p {
   color: inherit;
   font-family: var(--font-secondary);
-  font-size: 1.5rem;
+  font-size: var(--fs-600);
 }
 
 /* spatial explorer*/
@@ -944,7 +957,6 @@ section.vid div.step-heading {
   justify-content: space-around;
   /* background-image: linear-gradient(var(--clr-light), #bba77c); */
   margin-top: -1rem;
-
   padding: 25px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
@@ -979,7 +991,7 @@ section.vid div.step-heading {
 }
 
 .video-text-div h1 {
-  font-size: 1.5rem;
+  font-size: var(--fs-600);
   flex: 1;
   padding-bottom: 0.5em;
   color: var(--clr-dark);
@@ -988,7 +1000,7 @@ section.vid div.step-heading {
 .video-text-div p {
   font-family: var(--font-primary);
   font-style: normal;
-  font-size: large;
+  font-size: var(--fs-400);
   padding: 0.25em;
   padding-left: 0;
   flex: 4;
@@ -1022,7 +1034,7 @@ section.vid div.step-heading {
 
 .video-btn a {
   text-transform: uppercase !important;
-  font-size: 16px;
+  font-size: var(--fs-400);
   text-decoration: none;
   color: var(--clr-light);
 }
@@ -1040,9 +1052,10 @@ section.vid div.step-heading {
   align-items: center;
   padding: 4rem;
   width: fit-content;
+  max-width: 80vw;
   margin: auto;
   font-family: var(--font-primary);
-  font-size: 1.5rem;
+  font-size: var(--fs-600);
   font-weight: 600;
   z-index: 1;
   filter: drop-shadow(--clr-dark);
@@ -1059,10 +1072,11 @@ section.vid div.step-heading {
   width: 90%;
   margin: auto;
   margin-top: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .team-section h2 {
-  font-size: xxx-large;
+  font-size: var(--fs-xl);
   color: var(--clr-dark);
   font-family: var(--font-primary);
 }
@@ -1076,6 +1090,7 @@ section.vid div.step-heading {
   align-content: space-evenly;
   align-items: center;
   margin: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .team-member-card {
@@ -1083,9 +1098,8 @@ section.vid div.step-heading {
   padding: 15px;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: var(--fs-500);
   font-weight: 500;
-
   border-width: 1px;
   height: 100%;
   width: 100%;
@@ -1093,7 +1107,7 @@ section.vid div.step-heading {
 }
 
 .team-member-card img {
-  width: 50%;
+  max-width: 50%;
   border-radius: 1000px;
   margin-bottom: 15px;
   margin-top: 10px;
@@ -1135,12 +1149,12 @@ section.vid div.step-heading {
   width: 100%;
   /*border-color: var(--clr-dark);*/
   text-transform: capitalize;
-  background-image: linear-gradient(#74c7c0, #a0d8d3);
+  /* background-image: linear-gradient(#74c7c0, #a0d8d3); */
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 .contact-section i {
-  font-size: 100px;
+  font-size: var(--fs-xxl);
   margin-bottom: 20px;
   color: var(--clr-dark);
 }
@@ -1178,6 +1192,21 @@ section.vid div.step-heading {
   .space {
     display: none;
   }
+
+  .diagram-section .row {
+    flex-direction: column;
+  }
+
+  .pillars-row {
+    flex-direction: column;
+  }
+
+  .pillars {
+    margin-bottom: 2rem;
+  }
+  .pillars h1 {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* natural language search stylting */
@@ -1190,7 +1219,7 @@ section.vid div.step-heading {
 }
 
 .coming-soon h1 {
-  font-size: 10rem;
+  font-size: var(--fs-xxl);
   text-transform: uppercase !important;
   color: var(--clr-dark);
 }
@@ -1234,7 +1263,7 @@ footer {
 
 /* Style heading elements */
 h3 {
-  font-size: 16px;
+  font-size: var(--fs-400);
   font-weight: bold;
   margin-bottom: 10px;
   color: var(--clr-dark);
@@ -1279,11 +1308,9 @@ a:hover {
     padding-bottom: 40px;
   }
   .logo {
-    display: none;
+    transform: scale(80%);
   }
-  .logo-small {
-    display: block;
-  }
+
   .nav-buttons li a,
   .support-link {
     font-size: 20px;
