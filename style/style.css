@@ -6,8 +6,8 @@
   --font-secondary: "Libre Baskerville", serif;
   --font-quotes: "Libre Franklin", sans-serif;
 
-  --fs-xxl: clamp(3rem, 9vw, 7rem);
-  --fs-xl: clamp(2rem, 4.25vw, 4rem);
+  --fs-xxl: clamp(4rem, 9vw, 7rem);
+  --fs-xl: clamp(3rem, 4.25vw, 4rem);
   --fs-700: clamp(1rem, 2vw, 1.75rem);
   --fs-600: clamp(0.75rem, 1.6vw, 1.5rem);
   --fs-500: clamp(0.7rem, 1.25vw, 1.25rem);
@@ -639,7 +639,7 @@ nav.scroll li a {
   padding: 3rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(max(300px, 100%/4), 1fr));
 }
 
 .content-text {
@@ -888,15 +888,17 @@ section.vid div.step-heading {
   text-align: left;
   color: white;
   max-width: 100%;
+  max-height: 50vh;
   z-index: -1;
   margin-top: -110px;
+  overflow: hidden;
 }
 
 .header-img-div {
-  max-height: 50vh;
-  width: 100%;
+  /* max-height: 50vh; */
+  /* width: 100%; */
   overflow: hidden;
-  margin-top: -115px;
+  /* margin-top: -115px; */
 }
 
 .header-img {
@@ -911,14 +913,15 @@ section.vid div.step-heading {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-70%, 0%);
+  width: 70vw;
+  transform: translate(clamp(-50vw, -60%, -30vw), 0%);
 }
 
 .header-text h1 {
   font-size: var(--fs-xl);
   /* padding-bottom: 10px; */
   color: inherit;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .header-text p {
