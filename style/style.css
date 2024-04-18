@@ -6,12 +6,12 @@
   --font-secondary: "Libre Baskerville", serif;
   --font-quotes: "Libre Franklin", sans-serif;
 
-  --fs-xxl: clamp(4rem, 9vw, 7rem);
-  --fs-xl: clamp(3rem, 4.25vw, 4rem);
+  --fs-xxl: clamp(2.5rem, 8vw, 7rem);
+  --fs-xl: clamp(2rem, 4.25vw, 4rem);
   --fs-700: clamp(1rem, 2vw, 1.75rem);
   --fs-600: clamp(0.75rem, 1.6vw, 1.5rem);
-  --fs-500: clamp(0.7rem, 1.25vw, 1.25rem);
-  --fs-400: clamp(0.75rem, 1vw, 1rem);
+  --fs-500: clamp(0.6rem, 1.5vw, 1.25rem);
+  --fs-400: clamp(0.6rem, 1.5vw, 1rem);
 }
 /* Set default font and box-sizing */
 * {
@@ -355,6 +355,7 @@ nav.scroll li a {
   font-weight: 300;
   margin-left: 0.5rem;
   padding-bottom: 20px;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -362,6 +363,9 @@ nav.scroll li a {
   color: var(--clr-light);
 }
 
+.hero-copy:nth-child(odd) {
+  display: none;
+}
 .rotating-domains {
   display: flex;
   flex-direction: column;
@@ -562,7 +566,7 @@ nav.scroll li a {
   align-items: center;
   justify-content: center;
   padding: 1.5em;
-  width: 90vw;
+  max-width: 90vw;
 }
 
 .column {
@@ -575,6 +579,8 @@ nav.scroll li a {
 
 .diagram-section {
   margin-top: -2em;
+  margin-inline: auto;
+  max-width: 90vw;
 }
 
 .diagram-section .row .column {
@@ -595,7 +601,7 @@ nav.scroll li a {
   font-family: "Libre Franklin", serif;
   font-style: normal;
   font-size: var(--fs-500);
-  width: 80%;
+  /* width: 80%; */
   padding: 0.25em;
   padding-left: 0;
   /* margin-left: -1em; */
@@ -635,8 +641,8 @@ nav.scroll li a {
 
 .quotes {
   max-width: 80vw;
+  margin-top: 3rem;
   margin-inline: auto;
-  padding: 3rem;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(max(300px, 100%/4), 1fr));
@@ -778,6 +784,7 @@ cite:before {
 .pillars h1 {
   color: var(--clr-dark);
   margin-bottom: 1em;
+  font-size: var(--fs-700);
 }
 
 .pillars p {
@@ -1130,7 +1137,7 @@ section.vid div.step-heading {
 .contact-section ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(max(300px, 100%/3), 1fr));
   gap: 10px;
   justify-content: space-evenly;
   justify-items: center;
@@ -1168,6 +1175,7 @@ section.vid div.step-heading {
 
 .contact-section p {
   color: var(--clr-dark);
+  font-size: var(--fs-500);
 }
 
 .bottom-logo {
@@ -1212,6 +1220,22 @@ section.vid div.step-heading {
   }
 }
 
+@media (max-width: 530px) {
+  .diagram {
+    width: 100vw;
+    /* margin-left: -12vw; */
+  }
+  .hero-copy:nth-child(even) {
+    display: none;
+  }
+  .hero-copy:nth-child(odd) {
+    display: block;
+  }
+  .video-text-div {
+    margin: 0;
+  }
+}
+
 /* natural language search stylting */
 .coming-soon {
   display: flex;
@@ -1253,7 +1277,7 @@ footer {
   background-color: var(--clr-light);
   color: var(--clr-dark);
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: var(--fs-500);
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
   position: relative;
 }
