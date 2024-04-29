@@ -642,6 +642,7 @@ nav.scroll li a {
 .quotes {
   max-width: 80vw;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   margin-inline: auto;
   display: grid;
   gap: 2rem;
@@ -969,6 +970,7 @@ section.vid div.step-heading {
   margin-top: -1rem;
   padding: 25px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  margin-bottom: 3rem;
 }
 
 .video-div {
@@ -978,6 +980,14 @@ section.vid div.step-heading {
 
   margin: 0rem 3rem;
   z-index: -1;
+  overflow: hidden;
+}
+
+.video-div iframe {
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
 }
 
 .video-div:hover {
