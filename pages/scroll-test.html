@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style/scroll-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Scroll Test</title>
+  </head>
+  <body>
+    <section>
+      <h1>How to Use</h1>
+    </section>
+    <div class="line-container">
+      <svg
+        viewBox="0 0 752 486"
+        fill="none"
+        preserveAspectRatio="xMidYMax meet"
+      >
+        <path
+          d="M375 216C376.333 222.333 373.6 234 352 234C330.4 234 128.333 234 30 234C21 234.667 3 240.2 3 257C3 273.8 3 416.667 3 486M375 216C372.797 226.5 383.3 234 410.5 234C437.7 234 625 234 716 234C727 233 749 236.2 749 257C749 277.8 749 375 749 421M375 216V0V421"
+          stroke="#FF0000"
+          stroke-width="5"
+        />
+      </svg>
+    </div>
+    <section class="spacer"></section>
+    <section class="row row-1">
+      <img src="..\images\firefox_rWNQe73XYd.jpg" />
+    </section>
+    <section class="row row-2">
+      <img src="..\images\Test1.jpg" />
+      <img src="..\images\Test1.jpg" />
+      <img src="..\images\Test1.jpg" />
+    </section>
+    <script>
+      let path = document.querySelector("path");
+      let pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = pathLength + " " + pathLength;
+      path.style.strokeDashoffset = pathLength;
+
+      window.addEventListener("scroll", () => {
+        //what % down is it?
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+        //length of offset dashes
+        var drawLength = pathLength * scrollPercentage;
+        //
+        path.style.strokeDashoffset = pathLength - drawLength;
+      });
+    </script>
+  </body>
+</html>
