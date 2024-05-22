@@ -51,6 +51,7 @@ body {
   background-size: 100%;
 
   background-blend-mode: color-burn;
+  height: fit-content;
 }
 
 nav {
@@ -237,7 +238,7 @@ nav.scroll li a {
     background-color: var(--clr-dark);
   }
   nav.scroll {
-    background: none;
+    /* background: none; */
   }
   .checkbtn i:hover {
     color: var(--clr-light);
@@ -544,8 +545,8 @@ nav.scroll li a {
 .frosted-glass {
   background-color: rgba(255, 255, 255, 0.95);
   color: #333;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  /* margin-left: 3rem; */
+  /* margin-right: 3rem; */
   border-radius: 25px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
 
@@ -1089,10 +1090,14 @@ section.vid div.step-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-top: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.team-section ul {
+  max-width: clamp(50%, 90vw, 60%);
 }
 
 .team-section h2 {
@@ -1122,7 +1127,7 @@ section.vid div.step-heading {
   font-weight: 500;
   border-width: 1px;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   border-color: var(--clr-dark);
 }
 
@@ -1227,6 +1232,11 @@ section.vid div.step-heading {
   }
   .pillars h1 {
     margin-bottom: 0.5rem;
+  }
+
+  .frosted-glass {
+    margin-left: none;
+    margin-right: none;
   }
 }
 
