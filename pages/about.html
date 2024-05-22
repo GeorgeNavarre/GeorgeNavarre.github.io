@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -91,7 +95,7 @@
       </div>
     </section> -->
     <section class="main-title">
-      <h1>Three Ways To Gather Knowledge</h1>
+      <h1>How it Works</h1>
     </section>
     <!-- <div class="line-container">
       <svg
@@ -114,69 +118,213 @@
       <img src="..\images\Test1.jpg" />
       <img src="..\images\Test1.jpg" />
     </section> -->
-    <section class="sticky">
-      <h1>Browse the Wiki</h1>
+    <section class="sticky-section">
+      <h1>Graphing Knowledge</h1>
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\Wiki.png" />
-          <div class="overlay-div">
+          <img src="..\images\ontology.webp" />
+          <!-- <div class="overlay-div">
             <div class="overlay hidden"></div>
             <div class="overlay2 hidden"></div>
             <div class="overlay3 hidden"></div>
             <div class="overlay4 hidden"></div>
-          </div>
+          </div> -->
         </div>
         <div class="description">
           <p>
-            Browse the Wiki using the Categories Sidebar. These categories
-            correspond to the classes we have established in our ontology
-          </p>
-          <p>Read narrative-form summaries of the collected information.</p>
-          <p>
-            All of our information is very well cited and you can click through
-            to source data.
-          </p>
-          <p>
-            View a map for context. You can click this map and go to our spatial
-            explorer.<br />
-            Also view main data points about the subject.
+            We create an ontology where everything is related in groups called
+            ”triples”. A triple is a group of two "entities"- which are any
+            objects represented in the ontology - and a relationship between
+            them. The relationship is explicitly recorded in the ontology.
           </p>
         </div>
       </div>
+      <div class="browse">
+        <div class="description">
+          <p>
+            Entities also have "classes" which they fall into, which you can
+            think of as the "type" of object it is. Each class has a group of
+            attributes associated with it, the fields of which will be the same
+            across all members of the class, but who values may vary.
+          </p>
+        </div>
+        <div class="img-div">
+          <img src="..\images\sesame_graph.webp" />
+        </div>
+      </div>
+    </section>
+    <section class="sticky-section">
+      <div class="browse">
+        <div class="img-div">
+          <img src="..\images\muppetsgraph.webp" />
+        </div>
+        <div class="description">
+          <p>
+            The structure that is created when numerous entities are linked in
+            this way is called a knowledge graph.
+          </p>
+          <p>
+            Knowledge graphs have certain advantages over more traditional database structures. For our purposes, the most important of these include the combinatation of disperate data sources, machine understandability, and subsequently machine inference.
+          </p>
+          <p>Inference is the ability to extrapolate facts that arent explicitly stated in the database, based on data and relationships that are specifically encoded. This allows us to perform more insightful queries than traditional databases.</p>
+      </div>
+    </section>
+    <section class="sticky-section">
+      <div class="browse">
+        <div class="img-div">
+          <img src="..\images\wiki_oscar.webp" />
+        </div>
+        <div class="description">
+          <p>
+            The data for a knowledge graph must live somewhere, and we will be hosting ours on a linked data media wiki. This lets us create templates for classes and link entities easily using markdown. This also let users easily navigate if they are at all familiar wikis.
+          </p>
+          <p>
+            Usually, knowledge graphs sacrifice human usability for machine readability. By tying our knowledge graph and Wiki so close together we can make our data machine readable yet easily accessible to any curious human.
+          </p>
+      </div>
+    </section>
+    <section class="sticky-section">
+      <h1>Plain Language Search</h1>
+      <div class="section-intro">
+        <p>
+          Currently, querying databases requires knowledge of query languages that aren't practical to learn for many users. You also have to know in detail how the specific database you're querying is organized. We are working on making it possible to simply ask the database a question in plain English and receive an accurate answer, as well as proposed paths of information you may also want to pursue.
+        </p>
+      </div>
+      <div class="browse">
+        <div class="img-div">
+          <img src="..\images\robotgraph.webp" />
+        </div>
+        <div class="description">
+          <p>
+            An LLM will be trained on our database so that it "knows" what's in there.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+    
+    <section class="sticky-section">
+      <div class="browse">
+        <div class="description">
+          <p>
+            When you ask a plain language question, the LLM will create a corresponding query in the appropriate language so you don't have to! The database will then perform the query and provide the results to the user. It's important to note that at no point is the LLM actually presenting the user with information: it is only formulating the query. This gets around the problem with AI hallucination.
+          </p>
+          <p>
+            The knowledge graph enables us to infer connections that has not been specifically added. 
+          </p>
+        </div>       
+          <div class="img-div">
+            <div class="vid-div">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                class="search small-vid"
+                id="v0"
+                src="..\videos\Search Bar_web.webm"
+                type="video/webm"
+              ></video>
+            </div>
+            <img src="..\images\robot_query.webp" />
+            <div>
+            <i class="fa-solid fa-arrow-down"></i>
+            </div>
+          </div>
+
+      </div>
+      
     </section>
 
-    <!-- <section class="vid">
-      <div class="vid-div">
-        <video
-          class="scroll-video"
-          src="..\videos\Step One.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
-        <div class="step-heading">
-          <h1>Step 1</h1>
-          <p>Create a Robust Database</p>
-        </div>
+    <section class="sticky-section">
+      <div class="browse">
+        <div class="description">
+          <p>
+            The fact that Leon has a cousin who lives on Seasme street is never <em>explicitly</em> encoded in the database, but the knowledge graph enables us to infer this fact. 
+          </p>
+        </div>       
+          <div class="img-div">
+            <img src="..\images\leonwiki.webp" />
+          </div>
+
       </div>
+      
     </section>
-    <section class="vid vid2">
-      <div class="vid-div">
-        <video
-          class="scroll-video scroll-video2"
-          src="..\videos\Step One.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
-        <div class="step-heading">
-          <h1>Step 2</h1>
-          <p>Create novel and intuitive tools</p>
+
+    <section class="sticky-section">
+      <h1>Spatial Explorer</h1>
+      <div class="section-intro">
+        <p>
+          We will also have a spatial explorer to enable intuitive knowledge acquisition via a map-based user interface. 
+        </p>
+        <p>
+          Say you want to explore Oscar's relationships with other creature in his area. Lets take a look at how you might do so.
+        </p>
+      </div>
+      <div class="browse">
+        <div class="img-div">
+          <img src="..\images\sesame_graph.webp" />
+          <div class="overlay-div" id="sesame-graph-overlay">
+            <div class="overlay" id="has-geography"></div>
+          </div>
+        </div>
+        <div class="description" id="sesame-graph-text">
+          <p>
+            Any object on the knowledge graph with relevant spatial information will have that information listed in it's attribute table.
+          </p>
         </div>
       </div>
-    </section> -->
+    <div class="nodes">
+      <div>
+      <img src="..\images\species.webp"  />
+    </div>
+    <div>
+      <img src="..\images\ecoreg.webp"  />
+    </div>
+    <div>
+      <img src="..\images\municipality.webp"  />
+    </div>
+    </div>  
+    </section>
+      <div class="browse">
+        <div class="img-div" id="basemap">
+          <img src="..\images\mapbase.webp"  />
+          
+
+
+          <div class="overlay-div" id="map-overlay">
+            <img src="..\images\ecoregion.webp" class="overlay" id="ecoregion"/>
+            <img src="..\images\NYC.webp" class="overlay" id="NYC"/>
+            <img src="..\images\racoon.webp" class="overlay" id="raccoon"/>
+            <img src="..\images\snuffle.webp" class="overlay" id="snuffle"/>
+          </div>
+        </div>
+        <div class="description" id="map-text">
+          <p>
+            At the base of much of our organization is the USEPA ecoregions. We've clicked on the Level 4 Ecoregions layer so we can see the ecological setting we're concerned with. <br \><br \> We could draw on the map to select an area, but Sesame Street is in Manhattan, so we'll apply the New York municiplalty layer on top of that.  
+          </p>
+          <p>
+            Now we can see the boundaries of New York City, and in the info box at the bottom of the interface we are presented with basic information about the city. If we wished we could click on that info to navigate through to the NYC wiki page. <br \><br \>For now though we'll check out some species that live in NYC, and therfore near Oscar.
+          </p>
+          <p>
+            We use the Layers window to navigate to species info that will let us populate the region we've selected with sightings of the species of concern. <br \><br \> It looks like there are alot of racoons in the area, but they are pretty spread out. We're looking for a creature he might see every day so lets add another selction.
+          </p>
+          <p>
+            We figure Sunffleupagus would be a good bet, so we select the species from the Layers window. We're actualy a little surprised to see that the Snuffalupagus range is acutally a bit bigger than expected - we thought there was only one and that it lived on Sesame Street!
+          </p>
+          <p>
+            We can click on any one of the sightings and find out more details about that particular sighting. We can also slick through to the Wiki page and discover that there are a number of Sunffleupagi, and that they all live in a cave just outside of Sesame Street.
+          </p>
+        </div>
+      </div>
+      
+    </section>
+
+    
+
+ 
+ 
+
     <section class="team-section">
       <h2>Meet the Team!</h2>
       <ul>
@@ -223,32 +371,12 @@
     <script src="..\script\gif-scrub.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script>
-      const description = document.querySelector(".description");
-      var descriptionChildren = description.childNodes;
-      const overlay = document.querySelector(".overlay-div");
-      var overlayChildren = overlay.childNodes;
+        overlayShow("#sesame-graph-text", "#sesame-graph-overlay")
+        overlayShowCumulate("#map-text", "#map-overlay")
+        
 
-      document.addEventListener("scroll", function () {
-        for (var i = 0; i < descriptionChildren.length; i++) {
-          if (i % 2 != 0) {
-            const clientHeight = document.documentElement.clientHeight;
-            const descriptionY =
-              descriptionChildren[i].getBoundingClientRect().y -
-              clientHeight * 0.1;
-            const descriptionHeight =
-              descriptionChildren[i].getBoundingClientRect().height +
-              clientHeight;
+        
 
-            if (i % 2 != 0 && clientHeight > descriptionY && descriptionY > 0) {
-              overlayChildren[i].classList.remove("hidden");
-              overlayChildren[i].classList.add("show");
-            } else {
-              overlayChildren[i].classList.remove("show");
-              overlayChildren[i].classList.add("hidden");
-            }
-          }
-        }
-      });
     </script>
   </body>
 </html>
