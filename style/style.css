@@ -420,6 +420,7 @@ nav.scroll li a {
   background-size: cover;
   padding: none;
   position: relative;
+  width: 100%;
   /* margin-top: -110px; */
 }
 
@@ -588,14 +589,18 @@ nav.scroll li a {
 
 .diagram-section .row .column {
   height: 90%;
-  flex: 1;
 
   /* background-color: #06bde3; */
 }
 
+.diagram-text {
+  flex: 2;
+  margin-right: 5rem;
+}
+
 .diagram-text h1 {
   font-size: var(--fs-700);
-  flex: 1;
+
   padding-bottom: 1em;
   color: var(--clr-dark);
 }
@@ -608,7 +613,6 @@ nav.scroll li a {
   padding: 0.25em;
   padding-left: 0;
   /* margin-left: -1em; */
-  flex: 4;
 }
 
 .diagram-section p em {
