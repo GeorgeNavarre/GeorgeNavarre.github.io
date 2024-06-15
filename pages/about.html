@@ -42,26 +42,24 @@
         <div class="video-text-div">
           <h1 class="">Robust and Intuitive Research Tools for All</h1>
           <p class="">
-            First, and perhaps most importantly, we are assembling a
-            comprehensive database of all publicly available data relating to
-            extractive activities and their effects upon the surrounding
-            ecological, economic, and communal surroundings.
+            First, and perhaps most importantly, we are assembling a data system of all publicly available information relating to
+            extractive activities and their ecological community surroundings.
           </p>
           <p class="">
             Of course, that then necessitates access to that data, so we are
             developing user-friendly navigation tools. No need to learn any
             programming or query languages -
-            <em>if you can use a computer you can access our data!</em>
+            <em>if you can turn on a computer you can access our data!</em>
           </p>
           <p class="">
             Ask a plain English question in our natural language query tool and
-            you'll be routed to all relevant information in our database,
+            you'll be routed to all relevant information in our data system,
             complete with citations and - where possible - links to the full
             source text.
           </p>
           <p class="">
             If it's a region you're interested in, you can browse the spatial
-            explorer and view by municipality, ecoregion, and many other preset
+            explorer and view by municipality, ecoregion, species range and many other preset
             boundaries. Or you can draw your own polygons and customize your
             data that way.
           </p>
@@ -100,7 +98,7 @@
           <p>
             We create an ontology where everything is related in groups called
             ”triples”. A triple is a group of two "entities"- which are any
-            objects represented in the ontology - and a relationship between
+            objects represented in the ontology - with a predefined relationship between
             them. The relationship is explicitly recorded in the ontology.
           </p>
         </div>
@@ -109,8 +107,8 @@
       <div class="browse">
         <div class="description">
           <p>
-            Entities also have "classes" which they fall into, which you can
-            think of as the "type" of object it is. Each class has a group of
+            Entities also have "classes", within which they fall. You can
+            think of a class as the "type" of object the entity is. Each class has a group of
             attributes associated with it, the fields of which will be the same
             across all members of the class, but who values may vary.
           </p>
@@ -131,7 +129,7 @@
             this way is called a knowledge graph.
           </p>
           <p>
-            Knowledge graphs have certain advantages over more traditional database structures. For our purposes, the most important of these include the combinatation of disperate data sources, machine understandability, and subsequently machine inference.
+            Knowledge graphs have certain advantages over more traditional database structures. For our purposes, the most important of these include the combination of disparate data sources, machine understandability, and subsequently machine inference.
           </p>
           <p>Inference is the ability to extrapolate facts that arent explicitly stated in the database, based on data and relationships that are specifically encoded. This allows us to perform more insightful queries than traditional databases.</p>
         </div>
@@ -142,7 +140,7 @@
         </div>
         <div class="description">
           <p>
-            The data for a knowledge graph must live somewhere, and we will be hosting ours on a linked data media wiki. This lets us create templates for classes and link entities easily using markdown. This also let users easily navigate if they are at all familiar wikis.
+            The data for a knowledge graph must live somewhere, and we will be hosting ours on a linked data media wiki. This lets us create templates for classes and link entities easily using markdown. This also let users easily intuit navigation of the wiki.
           </p>
           <p>
             Usually, knowledge graphs sacrifice human usability for machine readability. By tying our knowledge graph and Wiki so close together we can make our data machine readable yet easily accessible to any curious human.
@@ -153,7 +151,7 @@
       <h1>Plain Language Search</h1>
       <div class="section-intro">
         <p>
-          Currently, querying databases requires knowledge of query languages that aren't practical to learn for many users. You also have to know in detail how the specific database you're querying is organized. We are working on making it possible to simply ask the database a question in plain English and receive an accurate answer, as well as proposed paths of information you may also want to pursue.
+          Currently, querying databases requires knowledge of query languages that aren't practical to learn for many users. You also have to know in detail how the specific database you're querying is organized. We are working on writing the software to simply ask the database a question in plain English and receive an accurate answer, as well as proposed paths of information you may also want to pursue.
         </p>
       </div>
       <div class="browse">
@@ -162,7 +160,7 @@
         </div>
         <div class="description">
           <p>
-            An LLM will be trained on our database so that it "knows" what's in there.
+            A large language model(LLM) will be trained on our database so that it "knows" what's in there.
           </p>
         </div>
       </div>
@@ -173,7 +171,7 @@
             When you ask a plain language question, the LLM will create a corresponding query in the appropriate language so you don't have to! The database will then perform the query and provide the results to the user. It's important to note that at no point is the LLM actually presenting the user with information: it is only formulating the query. This gets around the problem with AI hallucination.
           </p>
           <p>
-            The knowledge graph enables us to infer connections that has not been specifically added. 
+            The knowledge graph enables us to infer connections between data entities that have not been specifically added to the system. 
           </p>
         </div>       
           <div class="img-div">
@@ -221,7 +219,7 @@
           We will also have a spatial explorer to enable intuitive knowledge acquisition via a map-based user interface. 
         </p>
         <p>
-          Say you want to explore Oscar's relationships with other creature in his area. Lets take a look at how you might do so.
+          As a fictional and entertaining example: Say resource extraction was proposed near Sesame Street and Oscar wants information to help him understand who will be affected. Let's take a look at how he might do so.
         </p>
       </div>
       <div class="browse">
@@ -233,51 +231,63 @@
         </div>
         <div class="description" id="sesame-graph-text">
           <p>
-            Any object on the knowledge graph with relevant spatial information will have that information listed in it's attribute table.
+            Any object on the knowledge graph with a location or geographic features will have that information listed in it's attribute table. These data can include point locations, boundary shapes, elevation, and more.
           </p>
         </div>
       </div>
     <div class="nodes">
       <div>
-      <img src="..\images\species.webp"  />
-    </div>
-    <div>
-      <img src="..\images\ecoreg.webp"  />
-    </div>
-    <div>
-      <img src="..\images\municipality.webp"  />
-    </div>
-    </div>  
+        <img src="..\images\species.webp"  />
+        <p class="caption">Species entinties with point data "hasSightings"</p>
+      </div>
+      <div>
+        <img src="..\images\ecoreg.webp"  />
+        <p class="caption">Ecoregion entinty with shape data "hasGeography"</p>
+      </div>
+      <div>
+        <img src="..\images\municipality.webp"  />
+        <p class="caption">Municipality entinty with shape data "hasGeography"</p>
+      </div>
+      </div>  
     </section>
-    <section class="">
+    <section class="sticky-section">
       <div class="browse">
-        <div class="img-div" id="basemap">
+        <div class="img-div " id="basemap">
           <img src="..\images\mapbase.webp"  />
           
 
 
           <div class="overlay-div" id="map-overlay">
-            <img src="..\images\ecoregion.webp" class="overlay" id="ecoregion"/>
+            <img src="..\images\custom selection.webp" class="overlay" id="selection"/>
             <img src="..\images\NYC.webp" class="overlay" id="NYC"/>
+            <img src="..\images\ecoregion.webp" class="overlay" id="ecoregion"/>
+            
             <img src="..\images\racoon.webp" class="overlay" id="raccoon"/>
             <img src="..\images\snuffle.webp" class="overlay" id="snuffle"/>
           </div>
         </div>
         <div class="description" id="map-text">
           <p>
-            At the base of much of our organization is the USEPA ecoregions. We've clicked on the Level 4 Ecoregions layer so we can see the ecological setting we're concerned with. <br \><br \> We could draw on the map to select an area, but Sesame Street is in Manhattan, so we'll apply the New York municiplalty layer on top of that.  
+            We know the location of the proposed mine, but because the proposal is so new, PanEcology doesn’t have data on it yet.<br \><br \> No worries! You can create a custom selection using either a drawn polygon or a point. We’ll use a point and enter the coordinates of the proposed mine.
           </p>
           <p>
-            Now we can see the boundaries of New York City, and in the info box at the bottom of the interface we are presented with basic information about the city. If we wished we could click on that info to navigate through to the NYC wiki page. <br \><br \>For now though we'll check out some species that live in NYC, and therfore near Oscar.
+            We know that Oscar lives on Sesame Street, and that Sesame Street is in New York City, so we enable the Cities layer and select New York.  Now we can see the boundaries of New York, and in the info box at the bottom of the interface we are presented with basic information about the city. If we wished we could click on that info to navigate through to the NYC wiki page, but for now we will continue our investigation on the map.
+          </p>
+
+          <p>
+            Now we’d like to get a sense of the ecological setting on and around Sesame Street.  We've clicked on the Level 4 Ecoregions layer so we can get a sense of the regions nearby ecology. <br \><br \> We can click through and read about these ecoregions, learning that it’s been largely urbanized, but there is some nearby farmland and scattered woods we’d need to be careful not to disturb with our proposed project. <br \><br \>Now we’re curious about the direct impact on nearby wildlife.
+  
           </p>
           <p>
-            We use the Layers window to navigate to species info that will let us populate the region we've selected with sightings of the species of concern. <br \><br \> It looks like there are alot of racoons in the area, but they are pretty spread out. We're looking for a creature he might see every day so lets add another selction.
+            We use the Layers window to navigate to species info that will let us populate the region we've selected with sightings of the species of interest. <br \><br \> It looks like there are a lot of raccoons in the area, and they are pretty spread out.<br \><br \> We're looking for a creature that might be a bit more sensitive to a resource extraction project, so lets add another selction.
           </p>
           <p>
-            We figure Sunffleupagus would be a good bet, so we select the species from the Layers window. We're actualy a little surprised to see that the Snuffalupagus range is acutally a bit bigger than expected - we thought there was only one and that it lived on Sesame Street!
+            We figure Sunffleupagus would be a good bet, so we select the species from the Layers window. We're actualy a little surprised to see that the Snuffalupagus range is actually a bit bigger than expected - we thought there was only one and that he lives on Sesame Street!<br \><br \>
+            We can click on any one of the sightings and find out more details about that particular sighting. We can also click through to the Wiki page and discover that there are a number of Snuffleupagi, and that they all live in a cave just outside of Sesame Street.
           </p>
           <p>
-            We can click on any one of the sightings and find out more details about that particular sighting. We can also slick through to the Wiki page and discover that there are a number of Sunffleupagi, and that they all live in a cave just outside of Sesame Street.
+           It looks like our proposed project is very near to the Snuffleupagus family cave. This is definitely a potential problem, but with this new information, Oscar and his community can approach the extraction company and policy makers to figure out an alternative!
+            
           </p>
         </div>
       </div>
