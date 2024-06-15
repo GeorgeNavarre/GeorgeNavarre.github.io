@@ -36,7 +36,7 @@ function overlayShow(textDiv, overlayDiv) {
       if (i % 2 != 0) {
         const clientHeight = document.documentElement.clientHeight;
         const descriptionY =
-          descriptionChildren[i].getBoundingClientRect().y - clientHeight * 0.1;
+          descriptionChildren[i].getBoundingClientRect().y + clientHeight * 0.5;
         const descriptionHeight =
           descriptionChildren[i].getBoundingClientRect().height + clientHeight;
 
@@ -64,16 +64,16 @@ function overlayShowCumulate(textDiv, overlayDiv) {
       if (i % 2 != 0) {
         const clientHeight = document.documentElement.clientHeight;
         const descriptionY =
-          descriptionChildren[i].getBoundingClientRect().y - clientHeight * 0.1;
+          descriptionChildren[i].getBoundingClientRect().y + clientHeight * 0.1;
         const descriptionHeight =
           description.getBoundingClientRect().height + clientHeight;
 
         if (i % 2 != 0 && clientHeight > descriptionY) {
-          overlayChildren[i].classList.remove("hidden");
-          overlayChildren[i].classList.add("show");
+          overlayChildren[i].classList.remove("ov-hidden");
+          overlayChildren[i].classList.add("ov-show");
         } else {
-          overlayChildren[i].classList.remove("show");
-          overlayChildren[i].classList.add("hidden");
+          overlayChildren[i].classList.remove("ov-show");
+          overlayChildren[i].classList.add("ov-hidden");
         }
       }
     }
