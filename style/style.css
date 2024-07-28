@@ -82,7 +82,7 @@ nav.scroll {
 .logo,
 .logo-small {
   height: 5.5rem;
-  padding-left: 20px;
+  padding-inline: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
@@ -111,7 +111,7 @@ nav.scroll {
 .support-link {
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  /* margin-inline: 50px; */
   position: relative;
   z-index: 100;
 }
@@ -420,7 +420,8 @@ nav.scroll li a {
   background-size: cover;
   padding: none;
   position: relative;
-  width: 100%;
+  min-width: 100%;
+  min-height: 50vh;
   /* margin-top: -110px; */
 }
 
@@ -923,7 +924,7 @@ section.vid div.step-heading {
   text-align: left;
   color: white;
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 40vh;
   z-index: -1;
   margin-top: -110px;
   overflow: hidden;
@@ -1302,17 +1303,50 @@ section.vid div.step-heading {
 
 /* natural language search stylting */
 .coming-soon {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
+  height: fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  overflow: hidden;
+  margin-top: -2rem;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.no-bg {
+  background-color: none;
+  background: none;
+  margin-top: 0;
+}
+
+.coming-soon .label {
+  position: absolute;
+  top: 4rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .coming-soon h1 {
   font-size: var(--fs-xxl);
   text-transform: uppercase !important;
   color: var(--clr-dark);
+}
+
+.mock {
+  max-width: 90vw;
+  max-height: 100vw;
+  position: relative;
+  opacity: 35%;
+}
+.coming-soon p {
+  font-size: var(--fs-500);
 }
 
 /* footer */ /* Reset default margin and padding */
@@ -1331,10 +1365,20 @@ footer,
 
 /* Style the footer sections */
 .footer-section {
-  max-width: 300px;
+  /* max-width: 300px; */
   padding: 20px;
   padding-inline: 5rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Add background color and adjust font styles */
@@ -1351,6 +1395,7 @@ footer {
   position: absolute;
   left: 20px;
   bottom: 5px;
+  font-size: var(--fs-400);
 }
 
 /* Style heading elements */
@@ -1378,12 +1423,19 @@ ul {
 li {
   margin-bottom: 5px;
   color: inherit;
+  font-size: var(--fs-400);
 }
 
 /* Style links */
 a {
   color: var(--clr-dark);
   text-decoration: none;
+}
+
+.footer-container em {
+  font-style: normal;
+  font-size: var(--fs-600);
+  font-weight: 700;
 }
 
 a:hover {
