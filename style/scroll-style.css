@@ -253,6 +253,11 @@ section h1 {
     padding: none;
   }
 
+  .sticky-section h1 {
+    /* margin-bottom: 1.5rem; */
+    text-align: center;
+  }
+
   .section-intro p {
     max-width: 100%;
     margin: auto;
@@ -268,6 +273,9 @@ section h1 {
     /* left: 40; */
     max-width: 100vw;
     margin-inline: auto;
+    position: relative;
+    top: 0vh;
+    margin-bottom: 0;
   }
 
   .img-div img {
@@ -286,19 +294,14 @@ section h1 {
     padding-bottom: none;
   }
 
-  .img-div {
-    top: 15vh;
-    margin-bottom: 20vh;
-  }
-
   .description p {
-    margin-top: 25vh;
-    margin-bottom: 5vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     max-width: 70%;
   }
 
   .leon {
-    margin-top: -51vh;
+    margin-top: -15vh;
   }
 
   #has-geography {
@@ -308,5 +311,19 @@ section h1 {
     left: 59.5%;
     background-color: var(--clr-teal);
     opacity: 50%;
+  }
+
+  #basemap {
+    position: sticky;
+    top: 130px;
+  }
+
+  #map-text p {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+
+  .footer-container {
+    flex-direction: row;
   }
 }
