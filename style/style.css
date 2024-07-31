@@ -892,7 +892,7 @@ section.vid div.step-heading {
   background-image: url(../images/mountain.png);
   background-position: center;
   padding: 2rem;
-  width: 100%;
+  max-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1108,13 +1108,20 @@ section.vid div.step-heading {
   font-family: inherit;
 }
 
+.team-section {
+  height: fit-content;
+  overflow: auto;
+}
+
 .team-section div {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
+  height: fit-content;
   margin: auto;
+  overflow: auto;
 }
 
 .team-section h2 {
@@ -1134,7 +1141,6 @@ section.vid div.step-heading {
   align-items: center;
   margin: 50px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  background-color: #ffe4a8;
 }
 
 .team-member-card {
