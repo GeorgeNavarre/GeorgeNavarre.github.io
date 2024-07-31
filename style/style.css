@@ -56,6 +56,7 @@ body {
   height: fit-content;
   background-attachment: fixed;
   max-width: 100vw;
+  overflow: hidden;
 }
 
 nav {
@@ -1251,10 +1252,6 @@ section.vid div.step-heading {
 }
 
 @media (max-width: 628px) {
-  .d {
-    display: none;
-  }
-
   .boxes {
     grid-template-columns: 1fr;
     align-items: center;
@@ -1272,19 +1269,6 @@ section.vid div.step-heading {
 
   .diagram-section .row {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .diagram-text {
-    margin: auto;
-  }
-
-  .diagram-text div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .pillars-row {
