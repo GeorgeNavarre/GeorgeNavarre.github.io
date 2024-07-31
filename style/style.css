@@ -1253,8 +1253,21 @@ section.vid div.step-heading {
     display: none;
   }
 
+  .d {
+    display: none;
+  }
+
   .diagram-section .row {
     flex-direction: column;
+  }
+  .diagram-text {
+    margin: auto;
+  }
+  .diagram-text div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .pillars-row {
