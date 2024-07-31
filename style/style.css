@@ -55,6 +55,8 @@ body {
   background-blend-mode: color-burn;
   height: fit-content;
   background-attachment: fixed;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
