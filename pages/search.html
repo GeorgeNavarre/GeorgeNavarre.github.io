@@ -8,6 +8,7 @@
     <title>PanEcology Home</title>
 
     <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/search.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,28 +33,313 @@
         </div>
       </div>
     </section>
-    <section class="coming-soon no-bg">
-      <div class="label">
-        <h1>coming soon</h1>
-        <p>
-          What we're pulling off is no easy task but with you're help we will
-          make it happen!
-          <br />Click the button to show your support!
+
+    <div class="intro">
+      <h1>Feature in Development!</h1>
+      <p>When you ask a question in the plain language search box, you will receive an answer in the form of a short article, synthesized from open source information through our knowledge graph. You can ask a question about any of our three categories, alone or in combination: <em>ecosystems</em>, <em>resource extraction projects</em> (mines for now) or <em>communities</em>.  For example, you might ask: <em>“What plants will be affected by the Stibnite Gold Project in Idaho?”</em>  You will get a response similar to this:
+      </p>
+    </div>
+    <section class="frosted-glass">
+      
+
+       <div class="search-demo">
+          <div class="search-column meta">
+            <form action="" class="search-div">
+              <input
+                type="text"
+                id="query"
+                name="query"
+                placeholder="“What plants will be affected by the Stibnite Gold Project in Idaho?”"
+              />
+              <!-- <label for="question">Ask a question.</label> -->
+              <button>
+                <!-- <a href="pages\search.html"></a> -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div id="stibnite" class="structured-data show">
+              <h1>Stibnite Gold Project</h1>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Stibnite_Historic_District_in_1942.jpg">
+              <p>1942 Image of historical mine in Stibnite Mining District</p>
+              <p class="src">Image source: <a href="https://en.wikipedia.org/wiki/Stibnite_Mining_District" target="__blank">See page for author</a>, Public domain, via Wikimedia Commons</p>
+              <p><em>Location:</em> Valley County, Idaho</p>
+              <p><em>Mining District:</em> Mining District</p>
+              <p><em>Mineral(s) Mined:</em> Stibnite</p>
+              <p><em>Product(s):</em> Gold, Antimony</p>
+              <p><em>Status:</em> Proposed</p>
+              <p><em>Mine Operator:</em> <a target="__blank" class="cite-link" href="https://perpetuaresources.com/"> Perpetua Resources</a></p>
+            </div>
+    
+    
+            <div id="white-bark-pine" class="structured-data">
+              <h1>Whitebark Pine</h1>
+              <img src="..\images\species images\whitebark_pine.jpg">
+              <p class="src">Image source: <a href="https://identify.plantnet.org/k-world-flora/species/Pinus%20albicaulis%20Engelm./data" target="__blank">plantnet.org</a></p>
+              <p><em>Binomial Name:</em> Pinus albicaulis </p>
+              <p><em>Conservation Status:</em> Endangered (ICUN 3.1)/ Vulnerable (Natureserve)</p>
+              <div class="list"><p><em>Scientific classification:</em></p> <ul><li>Kingdom:	Plantae</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Clade:	Gymnospermae</li>
+                <li>Division:	Pinophyta</li>
+                <li>Class:	Pinopsida</li>
+                <li>Order:	Pinales</li>
+                <li>Family:	Pinaceae</li>
+                <li>Genus:	Pinus</li>
+                <li>Subgenus:	P. subg. Strobus</li>
+                <li>Section:	P. sect. Quinquefoliae</li>
+                <li>Subsection:	P. subsect. Strobus</li>
+               <li> Species:	P. albicaulis</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="clarks-nutcracker" class="structured-data">
+              <h1>Clark's Nutcracker</h1>
+              <img src="..\images\species images\Clark's_Nutcracker_with_wings_out,_landing_on_a_rock.jpg">
+             <p class="src">Image source: <a href="https://en.wikipedia.org/wiki/User:Msulis" target="__blank">Msulis</a> at English Wikipedia</p>
+              <p><em>Binomial Name:</em> Nucifraga columbiana </p>
+              <p><em>Conservation Status:</em> Least Concern</p>
+              <div class="list"><p><em>Scientific classification:</em></p> <ul>
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Kingdom:	Animalia</li>
+                <li>Phylum:	Chordata</li>
+                <li>Class:	Aves</li>
+                <li>Order:	Passeriformes</li>
+                <li>Family:	Corvidae</li>
+                <li>Genus:	Nucifraga</li>
+                <li>Species:	N. columbiana</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="milkvetch" class="structured-data">
+              <h1>Bent-flowered Milkvetch</h1>
+              <img src="..\images\species images\Astragalus_distortus_var._engelmannii.jpg" >
+             <p class="src">Image source: <a href="https://commons.wikimedia.org/wiki/User:Eric_in_SF" target="__blank">Eric Hunt</a>, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0">, via Wikimedia Commons </a></p>
+             
+              <p><em>Binomial Name:</em> Astragalus inflexus </p>
+              <p><em>Conservation Status:</em> Apparently Secure</p>
+              <div class="list"><p><em>Scientific classification:</em></p> 
+            <ul>
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Kingdom:	Plantae</li>
+                <!-- <li>Phylum:	Chordata</li> -->
+                <li>Class:	Dicotyledoneae</li>
+                <li>Order:	Fabales</li>
+                <li>Family:	Fabaceae</li>
+                <li>Genus:	Astragalus</li>
+                <li>Species:	A. inflexus</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="moonwart" class="structured-data">
+              <h1>Least Moonwart</h1>
+              <img src="..\images\species images\Botrychium_simplex.jpg">
+              <p class="src">Image source: <a href="https://www.flickr.com/people/7147684@N03" target="__blank">Jason Hollinger</a>, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0">, via Wikimedia Commons</a></p>
+              <p><em>Conservation Status:</em> Secure</p>
+              <div class="list"><p><em>Scientific classification:</em></p> 
+            <ul>
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Kingdom:	Plantae</li>
+                <li>Class:	Polypodiopsida</li>
+                <li>Order:	Ophioglossales</li>
+                <li>Family:	Ophioglossaceae</li>
+                <li>Genus:	Botrychium</li>
+                <li>Species:	B. simplex</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="bitterroot" class="structured-data">
+              <h1>Least Moonwart</h1>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Lewisia_sacajaweana_2.jpg">
+              <p class="src">Image source: Edna Rey-Vizgirdas, Public domain, via Wikimedia Commons</p>
+              <p><em>Binomial Name:</em> Lewisia sacajaweana </p>
+              
+              <p><em>Conservation Status: </em>At Risk / Imperiled</p>
+              <div class="list"><p><em>Scientific classification:</em></p>  
+            <ul>  
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Kingdom:	Plantae</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Clade:	Angiosperms</li>
+                <li>Clade:	Eudicots</li>
+                <li>Order:		Caryophyllales</li>
+                <li>Family:		Montiaceae</li>
+                <li>Genus:		Lewisia</li>
+                <li>Species:		L. sacajaweana</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="helodium" class="structured-data">
+              <h1>Blandow's helodium</h1>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Helodium_blandowii.jpg">
+              <p class="src">Image source: <a href="https://www.inaturalist.org/photos/23393958" target="__blank">Andr Hospr</a>, CC BY 4.0 <a href="https://creativecommons.org/licenses/by/4.0">, via Wikimedia Commons</a></p>
+              <p><em>Binomial Name:</em> Helodium blandowii </p>
+              
+              <p><em>Conservation Status: </em>Secure</p>
+              <div class="list"><p><em>Scientific classification:</em></p>  
+            <ul>  
+                <li>Domain:	Eukaryota</li>
+                <li>Division:	Bryophyta</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Class:	Bryopsida</li>
+                <li>Subclass:	Bryidae</li>
+                <li>Order:	Hypnales</li>
+                <li>Family:	Helodiaceae</li>
+                <li>Genus:	Helodium</li>
+                <li>Species: H. blandowii</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="sweetgrass" class="structured-data">
+              <h1>Sweetgrass</h1>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Hierochloe_odorata_%28USDA%29.jpg">
+              <p class="src">Image source: Robert H. Mohlenbrock. USDA NRCS. 1992. Western wetland flora: Field office guide to plant species. West Region, Sacramento, CA. Courtesy of USDA NRCS Wetland Science Institute.</p>
+              <p><em>Binomial Name:</em> Hierochloe odorata </p>
+              
+              <p><em>Conservation Status: </em>Secure</p>
+              <div class="list"><p><em>Scientific classification:</em></p>  
+            <ul>  
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Class:	Bryopsida</li>
+                <li>Clade:	Angiosperms</li>
+                <li>Clade:	Monocots</li>
+                <li>Clade:	Commelinids</li>
+                <li>Order:	Poales</li>
+                <li>Family:	Poaceae</li>
+                <li>Genus:	Hierochloe</li>
+                <li>Species: 	H. odorata</li>
+                  </ul>
+                </div>
+            </div>
+    
+            <div id="rannoch-rush" class="structured-data">
+              <h1>Rannoch-rush</h1>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Scheuchzeria_palustris_-_flowering.jpg">
+              <p class="src">Image source: Bertblok, CC BY-SA 3.0 <a href="//creativecommons.org/licenses/by-sa/3.0" target="__blank">, via Wikimedia Commons</a></p>
+              <p><em>Binomial Name:</em> Scheuchzeria palustris </p>
+              
+              <p><em>Conservation Status: </em>Secure</p>
+              <div class="list"><p><em>Scientific classification:</em></p>  
+            <ul>  
+                <li>Domain:	Eukaryota</li>
+                <li>Clade:	Tracheophytes</li>
+                <li>Clade:	Angiosperms</li>
+                <li>Clade:	Monocots</li>
+                <li>Order:		Alismatales</li>
+                <li>Family:	Scheuchzeriaceae</li>
+                <li>Genus:	Scheuchzeria</li>
+                <li>Species: S. palustris</li>
+                  </ul>
+                </div>
+            </div>
+    
+          </div>
+          
+          <div class="search-column info">
+            <h1> Effects on Vegetation near the <button onclick="showData('stibnite')" class="interest-item">Stibnite Mining Project</button></h1>
+            <p>
+              Overall, the 2021 <a class="cite-link" target="__blank" href="https://perpetuaresources.com/wp-content/uploads/sgp_2021_MMP_Alts_spec_rpt_august_2022.pdf">Mine Management Plan (MMP)</a>-related vegetation
+              clearing would impact 3,564 acres, including primarily undisturbed
+              areas for the Burntlog Route where an increase in the potential for
+              non-native plant establishment and spread would be more deleterious.
+              The Johnson Creek Route Alternative would impact 3,399 acres through
+              vegetation clearing; however, much of the disturbance area would be
+              along or near previously disturbed areas (i.e., existing roads) where
+              non-native plants are already established or could become established
+              as a result of previously authorized activities. </p>
+              <p> The 2021 MMP would remove an estimated 259.5 acres of occupied <button onclick="showData('white-bark-pine')" class="interest-item">whitebark pine</button> habitat and
+              78 acres of assumed occupied habitat (16.3% of occupied habitat in the
+              analysis area) and 287.4 acres of modeled suitable habitat (6.7% of
+              modeled suitable habitat in the analysis area), totaling 1,278 trees
+              (27 would be individuals observed with cones during 2019 field
+              surveys). Impacts to the whitebark pine would be less under the
+              Johnson Creek Route Alternative as an estimated 108.5 acres of
+              occupied whitebark pine habitat and 78 acres of assumed occupied
+              habitat (9.0% of occupied habitat in the analysis area) but no
+              additional acres of modeled suitable habitat, totaling an estimated
+              777 trees (27 would be individuals observed with cones during 2019
+              field surveys) would be removed. The mine site and access roads would
+              remove the majority of whitebark pine individuals and habitat, while
+              impacts as a result of the utilities and off-site facilities would be
+              minimal. Indirect impacts to occupied whitebark pine habitat may occur
+              during implementation of the 2021 MMP and Johnson Creek Route
+              Alternative, primarily as a result of dust, impacts to seed dispersers
+              (e.g., <button onclick="showData('clarks-nutcracker')" class="interest-item">Clark’s nutcracker</button>), and increased erosion and sedimentation
+              where disturbance occurs. These indirect impacts would occur near all
+              Project components but especially along the access roads and utilities
+              as this species has been documented over a large area in the
+              vegetation analysis area and surveyed occupied habitat totals
+              approximately 2,069 acres.</p>
+              <p> The Project would result primarily in
+              localized, long-term and permanent, moderate impacts to the whitebark
+              pine. The 2021 MMP would impact known occurrences of <button onclick="showData('milkvetch')" class="interest-item">bent-flowered
+              milkvetch</button>, <button onclick="showData('moonwart')" class="interest-item">least moonwort</button>, <button onclick="showData('bitterroot')" class="interest-item">Sacajawea’s bitterroot</button>, <button onclick="showData('helodium')" class="interest-item"> Blandow’s helodium</button>,
+              <button onclick="showData('sweetgrass')" class="interest-item">sweetgrass</button>, and <button onclick="showData('rannoch-rush')" class="interest-item">Rannoch-rush</button>, while the Johnson Creek Route
+              Alternative would impact known occurrences of bent-flowered milkvetch,
+              least moonwort, and Sacajawea’s bitterroot. Additionally, the 2021 MMP
+              would impact a greater amount of modeled potential habitat for
+              sensitive and forest watch plant species than the Johnson Creek Route
+              Alternative. Impacts as a result of increased potential for non-native
+              plant establishment and spread may be regional in nature due to the
+              relatively large amount of habitat disturbance associated with the
+              2021 MMP and Johnson Creek Route Alternative <sup><a target="__blank" href="https://perpetuaresources.com/wp-content/uploads/SGP-SDEIS-Executive-Summary-and-Table-of-Contents.pdf">1 </a></sup>. </p>
+            </p>
+          </div>
+       </div>
+      <div class="biblio">
+        <h1>Bibliography</h1>
+        <p><a target="__blank" href="https://perpetuaresources.com/wp-content/uploads/SGP-SDEIS-Executive-Summary-and-Table-of-Contents.pdf"> 1 Excerpt from page ES-18 of the Executive Summary, Stibnite Gold Project, Final Environmental Impact Statement, United States Department of Agriculture, Forest Service, Region 4, Payetter and Boise National Forests, Valley County, Idaho.”</a></p>
+      </div>
+    
+      </section>
+      <div class="intro bottom">
+        <!-- <h1>Feature in Development!</h1> -->
+        <p><em>We are committed to robust and precise citation of information to ensure the highest quality answers from the highest quality data.</em>
+          This particular quote is straight from the Stibnite Gold Project Environmental Impact Statement, but a more complex answer with more sources will have many more entries in this bibliography section.          
         </p>
-        <div class="support-link">
+        <p>
+          Our system is more reliable than standard AI because 1) It is searching data from our database, organized according to and backed by our <a href="..\pages\about.html">schema </a>, upon which it is extensively trained, and 2) Perhaps most importantly, it is completely transparent because it provides the sources of the information it has presented, so you can check its accuracy.
+        </p>
+        <p>
+          If you are using our free service, it will be important to edit the document by checking the sources our system lists.  Even with a check of the sources, using our system will save you a lot of time compared to starting your research from scratch.  If you commission us to search, we will ensure the document is consistent with the sources and that the sources are reliable and qualified.  This will save you even more time.
+        </p>
+        <p>This is just one of the tools in the works!  You can help us with development and keep up with our progress by <a href="https://www.patreon.com/PanEcology">subscribing to our Patreon Account for only $5 or $10 per month!</a></p>
+        <div class="support-link body-link">
           <a class="btn" href="http://www.patreon.com/PanEcology"
             >Support Our Mission!</a
           >
         </div>
       </div>
-    </section>
+  
+      <section class="footer"></section>
+      <script type="module" src="../script/main.js"></script>
+      <script type="module" src="../script/hide.js"></script>
+      <script
+        src="https://kit.fontawesome.com/7f29f39150.js"
+        crossorigin="anonymous"
+      ></script>
+  <script>
+    const shown = document.getElementsByClassName("show");
+  
+  function showData(iOI) {
+    shown[0].classList.remove("show");
+    const toShow = document.getElementById(iOI)
+    toShow.classList.add("show");
+  }
+      
+  
 
-    <section class="footer"></section>
-    <script type="module" src="../script/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7f29f39150.js"
-      crossorigin="anonymous"
-    ></script>
+</script>
 
     <script src="../script/app.js"></script>
     <script src="..\script\gif-scrub.js"></script>
