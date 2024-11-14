@@ -80,6 +80,7 @@ p {
   height: auto;
   margin: auto;
   margin-top: 1rem;
+  border-radius: 10px;
 }
 
 sup {
