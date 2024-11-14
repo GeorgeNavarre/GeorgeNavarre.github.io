@@ -7,7 +7,7 @@
   --font-quotes: "Libre Franklin", sans-serif;
 
   --fs-xxl: clamp(2.5rem, 8vw, 7rem);
-  --fs-xl: clamp(2rem, 4.25vw, 4rem);
+  --fs-xl: clamp(1rem, 4vw, 4rem);
   --fs-700: clamp(1rem, 2vw, 1.75rem);
   --fs-600: clamp(0.75rem, 1.6vw, 1.5rem);
   --fs-500: clamp(0.6rem, 1.5vw, 1.25rem);
@@ -35,7 +35,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
   max-width: 50vw;
   margin: auto;
