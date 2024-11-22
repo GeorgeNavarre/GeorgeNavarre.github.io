@@ -1,11 +1,4 @@
 :root {
-  --clr-dark: #381c50;
-  --clr-light: #ffe4a8;
-  --clr-teal: #71b9b1;
-  --font-primary: "Libre Franklin", sans-serif;
-  --font-secondary: "Libre Baskerville", serif;
-  --font-quotes: "Libre Franklin", sans-serif;
-
   --fs-xxl: clamp(2.5rem, 8vw, 7rem);
   --fs-xl: clamp(2rem, 4.25vw, 4rem);
   --fs-700: clamp(1rem, 2vw, 1.75rem);

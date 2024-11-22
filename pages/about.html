@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/kcl5vtl.css">
   </head>
 
   <body>
@@ -28,7 +29,7 @@
         <img
           class="header-img"
           src="..\images\mountain.png"
-          alt="Map of ecoregions of the US"
+          alt="Image of a mountain with a glacier atop it, an idyllic lake in the foreground."
         />
         <div class="header-text">
           <h1>About</h1>
@@ -77,7 +78,7 @@
       <h1>Graphing Knowledge</h1>
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\ontology.webp" />
+          <img src="..\images\ontology.webp" alt="A balls and spokes model, where the balls represent entities and the spokes represent relationships. This is a basic representation of a knowledge graph"/>
           <!-- <div class="overlay-div">
             <div class="overlay hidden"></div>
             <div class="overlay2 hidden"></div>
@@ -105,14 +106,15 @@
           </p>
         </div>
         <div class="img-div">
-          <img src="..\images\sesame_graph.webp" />
+          <img src="..\images\sesame_graph.webp" alt="A knowledge graph representation focusing on the entity Sesame Street. It is labeled as having a class of street. An information window has folded out of the entity displaying the following attributes. Has name, Sesame Street; has length, 1.35 miles; has location, New York, USA; has geography; geography represented by a bit of JSON code."/>
         </div>
       </div>
     </section>
     <section class="sticky-section frosted-glass">
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\muppetsgraph.webp" />
+          <img src="..\images\muppetsgraph.webp" alt="A knowledge graph displaying two Sesame Street characters, Oscar and Leon, and the street they live on, Sesame Street and Plaza Sesamo, respectively. The attributes for each entity are displayed as well as their classes. Oscar and Leon both have class Muppet, and Sesame Street and Plaza Sesamo both are labeled class: street.
+          " />
         </div>
         <div class="description">
           <p>
@@ -127,7 +129,7 @@
       </div>
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\wiki_oscar.webp" />
+          <img src="..\images\wiki_oscar.webp" alt="Illustration of a wiki-style page, the subject of which is Oscar the Grouch." />
         </div>
         <div class="description">
           <p>
@@ -147,7 +149,7 @@
       </div>
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\robotgraph.webp" />
+          <img src="..\images\robotgraph.webp" alt="A whimsical illustration of a futuristic robot examining a knowledge graph through a magnifying glass, as though searching for some information." />
         </div>
         <div class="description">
           <p>
@@ -178,7 +180,7 @@
                 type="video/webm"
               ></video>
             </div>
-            <img src="..\images\robot_query.webp" />
+            <img src="..\images\robot_query.webp" alt="A faux search bar is entered with the query, 'Who has a relative that lives on Sesame Street?' A happy looking robot replies with a bit of database query code. " />
             <div>
             <i class="fa-solid fa-arrow-down"></i>
             </div>
@@ -196,7 +198,7 @@
           </p>
         </div>       
           <div class="img-div">
-            <img src="..\images\leonwiki.webp" />
+            <img src="..\images\leonwiki.webp" alt="An illustration of a wiki-style page, the subject of which is Leon the Grouch." />
           </div>
 
       </div>
@@ -215,7 +217,7 @@
       </div>
       <div class="browse">
         <div class="img-div">
-          <img src="..\images\sesame_graph.webp" />
+          <img src="..\images\sesame_graph.webp"  alt="The same illustration of a knowledge graph focused on Sesame Street as above, but the 'has geography' attribute is highlighted."/>
           <div class="overlay-div" id="sesame-graph-overlay">
             <div class="overlay" id="has-geography"></div>
           </div>
@@ -228,33 +230,34 @@
       </div>
     <div class="nodes">
       <div>
-        <img src="..\images\species.webp"  />
-        <p class="caption">Species entinties with point data "hasSightings"</p>
+        <img src="..\images\species.webp" alt="Illustration of entities 'racoon' and 'Snuffelupagus', each with the class, species, and spatial data about sightings."/>
+        <p class="caption"  >Species entities with point data "hasSightings"</p>
+      </div>
+
+      <div>
+        <img src="..\images\ecoreg.webp" alt="Illustration of entity, Southern North East Coastal Plains with the class eco region, and spatial data about geography." />
+        <p class="caption">Ecoregion entity with shape data "hasGeography"</p>
       </div>
       <div>
-        <img src="..\images\ecoreg.webp"  />
-        <p class="caption">Ecoregion entinty with shape data "hasGeography"</p>
-      </div>
-      <div>
-        <img src="..\images\municipality.webp"  />
-        <p class="caption">Municipality entinty with shape data "hasGeography"</p>
+        <img src="..\images\municipality.webp" alt="Illustration of entity, New York City with the class of 'city', and spatial data about geography."   />
+        <p class="caption">Municipality entity with shape data "hasGeography"</p>
       </div>
       </div>  
     </section>
     <section class="sticky-section">
       <div class="browse">
         <div class="img-div " id="basemap">
-          <img src="..\images\mapbase.webp"  />
+          <img src="..\images\mapbase.webp" alt="An illustration of a spatial exploration application. To the left is a series of menu selections which can be made to alter the information displayed on the map. In the center, a base map is shown. At the bottom, a panel for information to be displayed, currently empty." />
           
 
 
           <div class="overlay-div" id="map-overlay">
-            <img src="..\images\custom selection.webp" class="overlay" id="selection"/>
-            <img src="..\images\NYC.webp" class="overlay" id="NYC"/>
-            <img src="..\images\ecoregion.webp" class="overlay" id="ecoregion"/>
+            <img src="..\images\custom selection.webp" class="overlay" id="selection" alt="A single marker appears representing the location of a proposed mine."/>
+            <img src="..\images\NYC.webp" class="overlay" id="NYC" alt="In the menu to the left, the radial button selecting New York City is selected, and an outline of the New York City limits is displayed on the map. Information about New York City is shown in the information panel."/>
+            <img src="..\images\ecoregion.webp" class="overlay" id="ecoregion" alt="An overlay displaying the borders of level 4 eco regions is displayed, as the eco region level 4 selection is made on the left. "/>
             
-            <img src="..\images\racoon.webp" class="overlay" id="raccoon"/>
-            <img src="..\images\snuffle.webp" class="overlay" id="snuffle"/>
+            <img src="..\images\racoon.webp" class="overlay" id="raccoon" alt="Species data for racoons is selected on the left, and 16 points are marked on the map within New York City Limits. These are logged racoon sightings, and the racoon species info is displayed on the info panel."/>
+            <img src="..\images\snuffle.webp" class="overlay" id="snuffle" alt="Species data for Snuffelupagus is selected on the left, and 9 points appear on the map within NYC limits, all clustered right near the proposed mine location. Species data populates the information panel. "/>
           </div>
         </div>
         <div class="description" id="map-text">
