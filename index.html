@@ -17,12 +17,17 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mansalva&family=Merienda:wght@300..900&family=Permanent+Marker&family=Salsa&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/kcl5vtl.css">
   </head>
-
-
-    <nav id="navbar" class="navbar sticky" aria-label="primary menu"></nav>
-
-    <section class="hero-container">
+  <body>
+    <!-- Navigation Section -->
+    <nav
+      id="navbar"
+      class="navbar sticky"
+      aria-label="Primary navigation"
+    ></nav>
+    <!-- Hero Section -->
+    <section class="hero-container" role="region" aria-labelledby="hero-title">
       <div class="img-div">
         <video
           autoplay
@@ -32,6 +37,7 @@
           class="hero-vid"
           src="videos\Hero Video.mp4"
           type="video/mp4"
+          aria-hidden="true"
         ></video>
       </div>
       <div class="hero-text">
@@ -59,24 +65,23 @@
               name="query"
               placeholder="Ask a question"
             />
-            <!-- <label for="question">Ask a question.</label> -->
-            <button>
-              <a href="pages\search.html"></a>
+            <label for="query">Ask a plain language question.</label>
+
+            <button aria-label="Submit question">
               <i class="fa-solid fa-arrow-right accept"></i>
             </button>
           </form>
-          <div class="hero-btn">
-            <a href="pages\map.html">Explore the Map</a>
-          </div>
-          <div class="hero-btn">
-            <a href="pages\wiki.html"
-              >Browse the wiki</a
-            >
-          </div>
+          <a class="hero-btn-div" href="pages\map.html">
+            <button class="hero-btn">Explore the Map</button></a
+          >
+          <a class="hero-btn-div" href="pages\wiki.html">
+            <button class="hero-btn">Browse the wiki</button>
+          </a>
         </div>
       </div>
     </section>
 
+    <!--Content-->
     <section class="diagram-section flex-grid frosted-glass">
       <div class="row">
         <div class="column hidden d">
@@ -90,26 +95,34 @@
               id="v0"
               src="videos\ven diagram.webm"
               type="video/webm"
-            ></video>
+              aria-hidden="true"
+            >
+              <p>
+                "A ven diagram animates and shows that economy is nested in
+                community is nested in ecology."
+              </p>
+            </video>
           </div>
         </div>
         <div class="column diagram-text">
           <div>
             <h1 class="hidden">A HOLISTIC YET SPECIFIC APPROACH</h1>
-            <p class="hidden">
-              <em>Ecology, Community, and Economy</em> are often conceived of as
-              separate domains. But in reality, they are
+            <span class="hidden">
+              <p>
+              <em>Ecology, Community, and Economy</em> are often
+              conceived of as separate domains. But in reality, they are
               <em>nested systems</em>.
             </p>
             <p class="hidden">
               <em>When we take action in one domain,</em> it doesn't occur in
               isolation. Our actions have effects that extend beyond our
-              immediate context. Finding information about these effects is often difficult, especially if one lacks resources or expertise.
+              immediate context. Finding information about these effects is
+              often difficult, especially if one lacks resources or expertise.
             </p>
             <p class="hidden">
-              <em>Accessible, accurate, and actionable information</em> is crucial to
-              maintaining economically and socially beneficial extractive
-              activity without leaving behind our
+              <em>Accessible, accurate, and actionable information</em> is
+              crucial to maintaining economically and socially beneficial
+              extractive activity without leaving behind our
               <em>environment and communities</em>.
             </p>
           </div>
@@ -119,7 +132,7 @@
     <section class="quotes">
       <div class="hidden content-text quote-div">
         <blockquote class="">
-          <h1 class="blockquote-em">>90%</h1>
+          <h2 class="blockquote-em">>90%</h2>
           of biodiversity loss and water stress are caused by resource
           extraction and processing.
           <cite>UN Global Resource Outlook 2019</cite>
@@ -128,7 +141,7 @@
       </div>
       <div class="hidden content-text">
         <blockquote class="">
-          "...material demand is expected to increase in the coming decades."<br><br>
+          "...material demand is expected to increase in the coming decades."<br /><br />
           We need "<em>...transparent</em> and
           <em>easily actionable</em> information".
           <cite>UN Global Resource Outlook 2024</cite>
@@ -137,20 +150,18 @@
       </div>
       <div class="hidden content-text quote-div">
         <blockquote class="">
-          ...demand for lithium ... is
-projected to increase sixfold to <h1 class="blockquote-em">500 kilotonnes</h1> by 2030 ...
-requiring the equivalent of 50 new average-sized mines.
+          ...demand for lithium ... is projected to increase sixfold to
+          <h2 class="blockquote-em">500 kilotonnes</h2>
+          by 2030 ... requiring the equivalent of 50 new average-sized mines.
           <cite>IEA - Global Supply Chains of EV Batteries</cite>
         </blockquote>
         <i class="fa-solid fa-circle-info icon-background"></i>
       </div>
-   
-     
 
       <div class="hidden content-text quote-div">
         <blockquote class="">
           ...the average Environmental Impact Statement completion time was
-          <h1 class="blockquote-em">4.5 years</h1>
+          <h2 class="blockquote-em">4.5 years</h2>
           <cite>CEQ EIS Timeline Report</cite>
         </blockquote>
         <i class="fa-solid fa-calendar icon-background"></i>
@@ -159,7 +170,7 @@ requiring the equivalent of 50 new average-sized mines.
         <blockquote class="">
           The period from publication of [a Notice of Intent] to the notice of
           availability of the draft EIS took on average
-          <h1 class="blockquote-em">58.4%</h1>
+          <h2 class="blockquote-em">58.4%</h2>
           of the total time.
           <cite>CEQ EIS Timeline Report</cite>
         </blockquote>
@@ -168,30 +179,38 @@ requiring the equivalent of 50 new average-sized mines.
       <div class="content-text hidden">
         <p class="">
           This means that the <em>largest portion</em> of the EIS permitting
-          process is spent in the <em>preliminary phase</em> – that is, gathering information and drafting proposed and alternative actions.<br><br><em>This is not even
-          to mention other permitting processes!</em>
+          process is spent in the <em>preliminary phase</em> – that is,
+          gathering information and drafting proposed and alternative
+          actions.<br /><br /><em
+            >This is not even to mention other permitting processes!</em
+          >
         </p>
         <i class="fa-solid fa-chart-pie icon-background"></i>
       </div>
     </section>
     <section class="mission">
-      <h1>
+      <p>
         PanEcology is a worker-owned ecology information company, making
         available
         <em>crucial</em> information about resource extraction and its
         <em>environmental, social, and economic context.</em>
-      </h1>
-      <h1>
-        We envision a world where transparent and truthful information about resource extraction is readily available to all, empowering communities, citizens, investors, companies, and government agencies to make informed choices.
-      </h1>
-      <h1>
-        To that end, we are developing user-friendly navigation tools, enabling everyone to ask questions in plain English and explore regions through an intuitive map interface.
-      </h1>
+      </p>
+      <p>
+        We envision a world where transparent and truthful information about
+        resource extraction is readily available to all, empowering communities,
+        citizens, investors, companies, and government agencies to make informed
+        choices.
+      </p>
+      <p>
+        To that end, we are developing user-friendly navigation tools, enabling
+        everyone to ask questions in plain English and explore regions through
+        an intuitive map interface.
+      </p>
     </section>
     <section class="pillars-section">
       <div class="row pillars-row">
         <div class="hidden pillars">
-          <h1>HIGH QUALITY</h1>
+          <h2>HIGH QUALITY</h2>
           <p>
             PanEcology ensures only the highest quality, well-cited data.
             Citations are clear and robust, and sources are transparent and
@@ -199,7 +218,7 @@ requiring the equivalent of 50 new average-sized mines.
           </p>
         </div>
         <div class="hidden pillars">
-          <h1>INDEPENDENT</h1>
+          <h2>INDEPENDENT</h2>
           <p>
             PanEcology is worker-owned and free from special interest influence.
             What data is available and how it is made available is not now and
@@ -207,72 +226,79 @@ requiring the equivalent of 50 new average-sized mines.
           </p>
         </div>
         <div class="hidden pillars">
-          <h1>OPEN</h1>
+          <h2>OPEN</h2>
           <p>
-            The PanEcology database of raw information is free to access for everyone.
-            Clients may hire analysis services for a fee.
+            The PanEcology database of raw information is free to access for
+            everyone. Clients may hire analysis services for a fee.
           </p>
         </div>
         <div class="hidden pillars">
-          <h1>NEUTRAL</h1>
+          <h2>NEUTRAL</h2>
           <p>We are NOT an advocacy group.</p>
           <p>
             PanEcology does neither advocate any policy nor endorse or oppose
             any project.
           </p>
-    
         </div>
       </div>
     </section>
     <section class="team-section">
-      <h1 class="main-title">Meet the Team!</h1>
-    <div>
-      <ul>
-        <li class="team-member-card frosted-glass">
-          <div class="img">
-            <img src="../images/headshots/phil.jpg" alt="Phil North" />
-          </div>
-          <p class="name">Phil North
-          </p>
-          <p>Ecologist with 40 years of experience</p>
-        </li>
-        <li class="team-member-card frosted-glass">
-          <div class="img">
-          <img src="../images/headshots/philip.jpg" alt="Philip Murphy" />
-          </div>
-          <p class="name">Philip Murphy</p>
-          <p>Knowledge Monger with 30 years of experience</p>
-        </li>
-        <li class="team-member-card frosted-glass">
-          <div class="img">
-          <img src="../images/headshots/george.jpg" alt="George Navarre" />
-        </div>
-          <p class="name">George Navarre</p>
-          <p>Artificial Intelligence Architect</p>
-        </li>
-        <li class="team-member-card frosted-glass">
-          <div class="img">
-          <img src="../images/headshots/josh.jpg" alt="Team Member Image" />
-        </div>
-          <p class="name">Josh Wyble</p>
-          <p>Content Developer and Communications Officer</p>
-        </li>
-        <li class="team-member-card frosted-glass">
-          <div class="img">
-          <img src="../images/headshots/bob.jpg" alt="Team Member Image" />
-        </div>
-          <p class="name">Bob Wyble</p>
-          <p>Content Developer and Communications Officer</p>
-        </li>
-  
-      </ul>
-  </div>
-  </section>
+      <h2 class="main-title">Meet the Team!</h2>
+      <div>
+        <ul>
+          <li class="team-member-card frosted-glass">
+            <div class="img">
+              <img
+                src="../images/headshots/phil.jpg"
+                alt="Photo of Phil North"
+              />
+            </div>
+            <p class="name">Phil North</p>
+            <p>Ecologist with 40 years of experience</p>
+          </li>
+          <li class="team-member-card frosted-glass">
+            <div class="img">
+              <img
+                src="../images/headshots/philip.jpg"
+                alt="Photo of Philip Murphy"
+              />
+            </div>
+            <p class="name">Philip Murphy</p>
+            <p>Knowledge Monger with 30 years of experience</p>
+          </li>
+          <li class="team-member-card frosted-glass">
+            <div class="img">
+              <img
+                src="../images/headshots/george.jpg"
+                alt="Photo of George Navarre"
+              />
+            </div>
+            <p class="name">George Navarre</p>
+            <p>Artificial Intelligence Architect</p>
+          </li>
+          <li class="team-member-card frosted-glass">
+            <div class="img">
+              <img
+                src="../images/headshots/josh.jpg"
+                alt="Photo of Team Member Image"
+              />
+            </div>
+            <p class="name">Josh Wyble</p>
+            <p>Content Developer and Communications Officer</p>
+          </li>
+          <li class="team-member-card frosted-glass">
+            <div class="img">
+              <img src="../images/headshots/bob.jpg" alt="Photo of Bob Wyble" />
+            </div>
+            <p class="name">Bob Wyble</p>
+            <p>Content Developer and Communications Officer</p>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="cta">
       <div class="support-link cta-button">
-        <a class="btn" href="../pages/about.html"
-          >Learn More</a
-        >
+        <a class="btn" href="../pages/about.html">Learn More</a>
       </div>
       <div class="support-link cta-button">
         <a class="btn" href="../pages/map.html">Explore the map</a>
@@ -281,11 +307,7 @@ requiring the equivalent of 50 new average-sized mines.
         <a class="btn" href="../pages/search.html">Ask a question</a>
       </div>
       <div class="support-link cta-button">
-        <a
-          class="btn"
-          href="pages\wiki.html"
-          >Browse the wiki</a
-        >
+        <a class="btn" href="pages\wiki.html">Browse the wiki</a>
       </div>
     </section>
 
@@ -296,7 +318,6 @@ requiring the equivalent of 50 new average-sized mines.
       crossorigin="anonymous"
     ></script>
 
-    
     <script src="../script/app.js"></script>
     <script src="..\script\gif-scrub.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>

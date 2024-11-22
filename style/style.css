@@ -3,7 +3,7 @@
   --clr-light: #ffe4a8;
   --clr-teal: #71b9b1;
   --font-primary: "Libre Franklin", sans-serif;
-  --font-secondary: "Libre Baskerville", serif;
+  --font-secondary: "alda", serif;
   --font-quotes: "Libre Franklin", sans-serif;
 
   --fs-xxl: clamp(2.5rem, 8vw, 7rem);
@@ -37,6 +37,14 @@ em {
   font-style: oblique;
   font-weight: 900;
   color: inherit;
+}
+
+p {
+  font-family: var(--font-secondary);
+}
+
+a {
+  font-family: var(--font-secondary);
 }
 
 /* Style the navigation bar */
@@ -329,7 +337,9 @@ nav.scroll li a {
 
   color: inherit;
 }
-
+label {
+  display: none;
+}
 .accent {
   font-family: "Permanent Marker", cursive;
   font-weight: 700;
@@ -338,7 +348,7 @@ nav.scroll li a {
 }
 
 .hero-copy-des {
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   margin-top: -1em;
   margin-left: 0.5rem;
   font-size: var(--fs-600);
@@ -355,6 +365,11 @@ nav.scroll li a {
   justify-content: start;
   align-items: center;
   color: var(--clr-light);
+}
+
+.hero-copy span {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-700);
 }
 
 .hero-copy:nth-child(odd) {
@@ -437,6 +452,9 @@ nav.scroll li a {
   max-height: 3.5rem;
 }
 
+.button-div label {
+  display: none;
+}
 .search-div {
   position: relative;
   display: flex;
@@ -493,7 +511,7 @@ nav.scroll li a {
   color: var(--clr-dark);
 }
 
-.hero-btn {
+.hero-btn-div {
   border-width: 1px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -509,25 +527,28 @@ nav.scroll li a {
   transition: 0.3s;
   scale: 100%;
   text-decoration: none;
+  background-color: transparent;
 }
 
-.hero-btn a {
+.hero-btn {
   font-family: var(--font-primary);
   text-transform: uppercase !important;
   font-size: var(--fs-500);
   text-decoration: none;
   color: var(--clr-light);
+  background-color: transparent;
+  border: none;
 }
 
-.hero-btn:hover {
+.hero-btn-div:hover {
   scale: 110%;
 }
 
-.hero-btn:active {
+.hero-btn-div:active {
   scale: 100%;
 }
 
-.hero-btn a:hover {
+.hero-btn-div:hover {
   text-decoration: none;
 }
 
@@ -537,15 +558,12 @@ nav.scroll li a {
   display: flex;
   flex-direction: column;
 }
+
 .frosted-glass {
   background-color: rgba(255, 255, 255, 0.95);
   color: #333;
-  /* margin-left: 3rem; */
-  /* margin-right: 3rem; */
   border-radius: 25px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
-
-  /* height: 300px;  */
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .frosted-glass {
@@ -607,9 +625,11 @@ nav.scroll li a {
   /* margin-left: -1em; */
 }
 
-.diagram-section p em {
+.diagram-section em {
   font-style: normal;
   font-weight: 700;
+  font-family: var(--font-primary);
+  color: var(--clr-dark);
 }
 
 .diagram {
@@ -680,10 +700,11 @@ blockquote {
   position: relative;
 }
 .blockquote-em {
-  font-family: inherit;
+  font-family: var(--font-secondary);
   font-size: var(--fs-xl);
-  line-height: 1;
-  position: relative;
+  /* line-height: 1; */
+  /* position: relative; */
+  margin-top: -1.5rem;
   color: var(--clr-dark);
 }
 .quote-div:before {
@@ -750,9 +771,11 @@ cite:before {
   background-position: 0%;
   padding: 1rem;
 }
-.mission h1 {
+.mission p {
   color: inherit;
+  font-family: var(--font-primary);
   font-size: var(--fs-700);
+  font-weight: 600;
   /* z-index: 1000; */
   padding: 1rem 2rem 1rem 2rem;
   text-align: center;
@@ -783,10 +806,11 @@ cite:before {
   font-family: var(--font-primary);
 }
 
-.pillars h1 {
+.pillars h2 {
   color: var(--clr-dark);
   margin-bottom: 1em;
   font-size: var(--fs-700);
+  font-family: var(--font-secondary);
 }
 
 .pillars p {
@@ -1129,8 +1153,9 @@ section.vid div.step-heading {
 
 .team-section h2 {
   font-size: var(--fs-xl);
-  color: var(--clr-dark);
-  font-family: var(--font-primary);
+  color: var(--clr-light);
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xxl);
 }
 
 .team-section ul {

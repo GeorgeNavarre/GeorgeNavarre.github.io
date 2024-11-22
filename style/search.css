@@ -1,11 +1,4 @@
 :root {
-  --clr-dark: #381c50;
-  --clr-light: #ffe4a8;
-  --clr-teal: #71b9b1;
-  --font-primary: "Libre Franklin", sans-serif;
-  --font-secondary: "Libre Baskerville", serif;
-  --font-quotes: "Libre Franklin", sans-serif;
-
   --fs-xxl: clamp(2.5rem, 8vw, 7rem);
   --fs-xl: clamp(1rem, 4vw, 4rem);
   --fs-700: clamp(1rem, 2vw, 1.75rem);
@@ -39,7 +32,7 @@ p {
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
   max-width: 50vw;
   margin: auto;
-  margin-top: -2rem;
+  margin-top: -1rem;
   position: relative;
   z-index: 100;
 }
@@ -70,8 +63,24 @@ p {
   position: relative;
 }
 
+#query-label {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: small;
+  font-family: var(--font-primary);
+  color: var(--clr-dark);
+}
+
 .src {
-  margin: auto;
+  margin-block: auto;
+  font-size: small;
+  margin-bottom: 1rem;
 }
 .structured-data img {
   max-height: 30rem;
@@ -269,6 +278,10 @@ li {
   color: var(--clr-light);
   background-color: var(--clr-dark);
   padding: 1rem;
+}
+
+.support-link {
+  font-size: var(--fs-700);
 }
 
 @media (max-width: 955px) {
