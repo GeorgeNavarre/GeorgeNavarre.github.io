@@ -1,64 +1,586 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PanEcology About</title>
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/kcl5vtl.css" />
-  </head>
+<head>
+  <!-- Existing head content from your original page -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PanEcology About</title>
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://use.typekit.net/kcl5vtl.css" />
 
-  <body>
-    <!-- nav bar -->
-    <nav id="navbar" class="navbar sticky" aria-label="primary menu"></nav>
-    <!-- header -->
-    <section class="header-section">
-      <div class="header-img-div">
-        <img
-          class="header-img"
-          src="..\images\quarry.png"
-          alt="Map of ecoregions of the US"
-        />
-        <div class="header-text">
-          <h1>Spatial Explorer</h1>
-          <p>Explore information via an interactive map interface</p>
+  <!-- Additional styles for the map -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+  />
+  <style>
+    :root {
+      --panel-br: #e8f4f8;
+      --panel-accent: #a8d5e5;
+      --text-col: #2d1752;
+      --text-col-alt: #333333;
+    }
+
+    /* Scope map styles to avoid conflicts */
+    .map-section {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    .map-section #sidebar {
+      width: 250px;
+      background-color: var(--panel-br);
+      color: var(--text-col-alt);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+      border-right: 1px solid var(--panel-accent);
+      z-index: 1000;
+    }
+
+    .map-section #map-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-section #map {
+      flex: 1;
+      height: 600px; /* Adjust as needed */
+    }
+
+    .map-section #info-panel {
+      height: 150px;
+      background-color: var(--panel-br);
+      color: var(--text-col-alt);
+      padding: 15px 20px;
+      border-top: 1px solid var(--panel-accent);
+      overflow-y: auto;
+    }
+
+    .filter-group {
+      margin-bottom: 20px;
+    }
+
+    .filter-group h3 {
+      color: var(--text-col);
+      margin-bottom: 15px;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .radio-button {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+      color: var(--text-col-alt);
+      transition: color 0.2s ease;
+    }
+
+    .radio-button:hover {
+      color: var(--text-col);
+    }
+
+    .radio-button input[type='radio'] {
+      margin-right: 10px;
+      accent-color: var(--text-col);
+    }
+
+    .mine-info {
+      display: flex;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .info-content {
+      flex: 1;
+    }
+
+    .info-content h2 {
+      margin: 0 0 10px 0;
+      color: var(--text-col);
+      font-size: 1.2em;
+    }
+
+    .mine-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .detail-row {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .detail-label {
+      font-weight: bold;
+      color: var(--text-col);
+      margin-right: 5px;
+      font-size: 0.9em;
+    }
+
+    .detail-value {
+      font-size: 0.9em;
+      color: var(--text-col-alt);
+    }
+
+    .mrdata-link {
+      grid-column: 1 / -1;
+      margin-top: 5px;
+    }
+
+    .mrdata-link a {
+      color: var(--text-col);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .mrdata-link a:hover {
+      text-decoration: underline;
+    }
+
+    .default-message {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .info {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+
+    .mine-popup {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .legend {
+      background-color: var(--panel-br);
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid var(--panel-accent);
+    }
+
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Existing navigation and header -->
+  <!-- nav bar -->
+  <nav id="navbar" class="navbar sticky" aria-label="primary menu"></nav>
+  <!-- header -->
+  <section class="header-section">
+    <div class="header-img-div">
+      <img
+        class="header-img"
+        src="../images/quarry.png"
+        alt="Map of ecoregions of the US"
+      />
+      <div class="header-text">
+        <h1>Spatial Explorer</h1>
+        <p>Explore information via an interactive map interface</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map section replacing the temporary section -->
+  <section class="map-section">
+    <div id="sidebar">
+      <h2>Map Filters</h2>
+      <div class="filter-group">
+        <h3>Map Layers</h3>
+        <label class="radio-button">
+          <input type="radio" name="layer" value="level1" checked />
+          Ecoregions Level 1
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="layer" value="level2" />
+          Ecoregions Level 2
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Mine Types</h3>
+        <label class="radio-button">
+          <input type="radio" name="mineType" value="all" checked />
+          All Mines
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="mineType" value="Gold" />
+          Gold
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="mineType" value="Silver" />
+          Silver
+        </label>
+        <label class="radio-button">
+          <input type="radio" name="mineType" value="Copper" />
+          Copper
+        </label>
+      </div>
+    </div>
+
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="info-panel">
+        <div class="default-message">
+          Select a mine or region to display information
+        </div>
+        <div class="mine-info hidden">
+          <div class="info-content">
+            <h2 id="feature-title"></h2>
+            <div id="feature-description"></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="coming-soon">
-      <div class="label">
-        <h1>COMING SOON!</h1>
-        <p>
-          Help us develop an intuitive map tool to help browse the most
-          comprehensive database on resource extraction ever!
-        </p>
-        <p>Your support goes a long way!</p>
-        <div class="support-link">
-          <a class="btn" href="http://www.patreon.com/PanEcology"
-            >Click to support!</a
-          >
+  <!-- Existing footer -->
+  <section class="footer"></section>
+
+  <!-- Existing scripts -->
+  <script type="module" src="../script/main.js"></script>
+  <script
+    src="https://kit.fontawesome.com/7f29f39150.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../script/app.js"></script>
+  <script src="../script/gif-scrub.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- Map scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script type="text/javascript" src="Americas.js"></script>
+  <script type="text/javascript" src="minedata.js"></script>
+  <script type="text/javascript" src="AL2.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('map', {
+      center: [37.8, -96],
+      zoom: 4,
+    });
+
+    // Add the base tile layer
+    var tiles = L.tileLayer(
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=YOUR_ACCESS_TOKEN',
+      {
+        maxZoom: 18,
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox/light-v9',
+        tileSize: 512,
+        zoomOffset: -1,
+      }
+    ).addTo(map);
+
+    // Color function
+    function getColor(d) {
+      return d < 5
+        ? 'rgb(' + 64 + ',' + (168 + d * 17) + ',' + (239 - d * 12) + ')'
+        : d < 9
+        ? 'rgb(' +
+          (64 + (d - 4) * 43) +
+          ',' +
+          (236 - (d - 4) * 12) +
+          ',' +
+          (191 - (d - 4) * 32) +
+          ')'
+        : d < 13
+        ? 'rgb(' + 236 + ',' + (188 - (d - 8) * 28) + ',' + 63 + ')'
+        : d < 17
+        ? 'rgb(' + 236 + ',' + (76 + (d - 12) * 28) + ',' + 63 + ')'
+        : d < 21
+        ? 'rgb(' +
+          (236 - (d - 16) * 43) +
+          ',' +
+          (188 + (d - 16) * 12) +
+          ',' +
+          (63 + (d - 16) * 32) +
+          ')'
+        : 'rgb(' + 64 + ',' + (236 - (d - 20) * 17) + ',' + (191 + (d - 20) * 12) + ')';
+    }
+
+    // Style function
+    function style(feature) {
+      return {
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7,
+        fillColor: getColor(feature.properties.id),
+      };
+    }
+
+    // Information panel functions
+    function showFeatureInfo(properties, type) {
+      const defaultMessage = document.querySelector('.default-message');
+      const featureInfo = document.querySelector('.mine-info');
+      const featureTitle = document.getElementById('feature-title');
+      const featureDescription = document.getElementById('feature-description');
+
+      defaultMessage.classList.add('hidden');
+      featureInfo.classList.remove('hidden');
+
+      if (type === 'ecoregion') {
+        featureTitle.textContent = properties.name;
+        var wikiText = properties.name.replaceAll(' ', '_');
+        var wikiUrl = `http://75.37.59.20/index.php/${wikiText}`;
+
+        featureDescription.innerHTML = `
+          <div class="detail-row"><span class="detail-label">Region ID:</span> ${properties.id}</div>
+          <div class="detail-row">
+              <a href="${wikiUrl}" target="_blank">View more details on the wiki</a>
+          </div>
+        `;
+      }
+    }
+
+    function showDetailedMineInfo(properties) {
+      const defaultMessage = document.querySelector('.default-message');
+      const featureInfo = document.querySelector('.mine-info');
+      const featureTitle = document.getElementById('feature-title');
+      const featureDescription = document.getElementById('feature-description');
+
+      defaultMessage.classList.add('hidden');
+      featureInfo.classList.remove('hidden');
+
+      featureTitle.textContent = properties.name;
+
+      featureDescription.innerHTML = `
+        <div class="mine-details-grid">
+            <div class="detail-row">
+                <span class="detail-label">Commodity:</span>
+                <span class="detail-value">${properties.COMMODITY}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Deposit Type:</span>
+                <span class="detail-value">${properties.DEP_TYPE}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Country:</span>
+                <span class="detail-value">${properties.COUNTRY}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">State:</span>
+                <span class="detail-value">${properties.STATE}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Model:</span>
+                <span class="detail-value">${
+                  properties.MODEL !== 'na' ? properties.MODEL : 'Not available'
+                }</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Category:</span>
+                <span class="detail-value">${properties.CATEGORY || 'Not specified'}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Detail:</span>
+                <span class="detail-value">${properties.DETAIL || 'Not specified'}</span>
+            </div>
+            <div class="mrdata-link">
+                <a href="${properties.URL}" target="_blank">View on MRDATA →</a>
+            </div>
         </div>
-      </div>
-    </section>
+      `;
+    }
 
-    <section class="footer"></section>
-    <script type="module" src="../script/main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7f29f39150.js"
-      crossorigin="anonymous"
-    ></script>
+    function resetInfoPanel() {
+      const defaultMessage = document.querySelector('.default-message');
+      const featureInfo = document.querySelector('.mine-info');
 
-    <script src="../script/app.js"></script>
-    <script src="..\script\gif-scrub.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  </body>
+      defaultMessage.classList.remove('hidden');
+      featureInfo.classList.add('hidden');
+    }
+
+    function highlightFeature(e) {
+      var layer = e.target;
+      layer.setStyle({
+        weight: 2,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.9,
+      });
+
+      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+      }
+      info.update(layer.feature.properties);
+    }
+
+    function resetHighlight(e) {
+      geojsonLayer.resetStyle(e.target);
+    }
+
+    function zoomToFeature(e) {
+      map.fitBounds(e.target.getBounds());
+    }
+
+    function onEachFeature(feature, layer) {
+      layer.on('click', function () {
+        showFeatureInfo(layer.feature.properties, 'ecoregion');
+      });
+      layer.on({
+        mouseover: function (e) {
+          highlightFeature(e);
+        },
+        mouseout: resetHighlight,
+        click: zoomToFeature,
+      });
+    }
+
+    var info = L.control();
+
+    info.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info');
+      this.update();
+      return this._div;
+    };
+
+    info.update = function (props) {
+      var level = '1';
+      if (props) {
+        if (String(props.id).includes('.')) {
+          level = '2';
+        } else {
+          level = '1';
+        }
+      }
+      this._div.innerHTML =
+        '<h4>North America Ecoregions Level ' +
+        level +
+        '</h4>' +
+        (props
+          ? '<b>' + props.name + '</b><br /><b>' + props.id + '</b><br />'
+          : 'Hover over a Region');
+    };
+    info.addTo(map);
+
+    // Initialize layers
+    var geojsonLayer = L.geoJson(AmericasLevelOne, {
+      style: style,
+      onEachFeature: onEachFeature,
+    }).addTo(map);
+
+    var geojsonLayer2 = L.geoJson(AL2, {
+      style: style,
+      onEachFeature: onEachFeature,
+    });
+
+    // Create mine markers with custom popup and click handling
+    var mineLayer = L.geoJson(Mines, {
+      onEachFeature: function (feature, layer) {
+        const popupContent = `
+          <div class="mine-popup">
+              <b>Name: ${feature.properties.name}</b><br>
+              <b>Commodity: ${feature.properties.COMMODITY}</b><br>
+              <b>Deposit Type: ${feature.properties.DEP_TYPE}</b>
+          </div>
+        `;
+
+        layer.bindPopup(popupContent);
+
+        layer.on('mouseover', function (e) {
+          this.openPopup();
+        });
+        layer.on('mouseout', function (e) {
+          this.closePopup();
+        });
+
+        layer.on('click', function () {
+          showDetailedMineInfo(feature.properties);
+        });
+      },
+    }).addTo(map);
+
+    // Handle layer switching
+    document.querySelectorAll('input[name="layer"]').forEach((radio) => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.value === 'level1') {
+          map.removeLayer(geojsonLayer2);
+          map.addLayer(geojsonLayer);
+        } else {
+          map.removeLayer(geojsonLayer);
+          map.addLayer(geojsonLayer2);
+        }
+      });
+    });
+
+    // Handle mine type filtering
+    document.querySelectorAll('input[name="mineType"]').forEach((radio) => {
+      radio.addEventListener('change', (e) => {
+        const selectedType = e.target.value;
+        map.removeLayer(mineLayer);
+
+        mineLayer = L.geoJson(Mines, {
+          filter: function (feature) {
+            return (
+              selectedType === 'all' ||
+              feature.properties.COMMODITY.includes(selectedType)
+            );
+          },
+          onEachFeature: function (feature, layer) {
+            layer.on('click', function () {
+              showDetailedMineInfo(feature.properties);
+            });
+
+            layer.bindTooltip(feature.properties.name, {
+              permanent: false,
+              direction: 'top',
+              className: 'custom-label',
+            });
+          },
+        }).addTo(map);
+      });
+    });
+
+    // Handle map clicks
+    map.on('click', function (e) {
+      if (e.originalEvent.target.id === 'map') {
+        resetInfoPanel();
+      }
+    });
+  </script>
+</body>
 </html>
