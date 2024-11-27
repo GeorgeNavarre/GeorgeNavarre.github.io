@@ -17,7 +17,7 @@
 }
 /* Set default font and box-sizing */
 * {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-secondary);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -80,7 +80,7 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 101;
+  z-index: 9999;
   background-color: transparent;
   transition: background-color 0.4s ease-in-out;
 }
