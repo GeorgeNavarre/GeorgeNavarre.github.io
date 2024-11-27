@@ -33,6 +33,11 @@
       display: flex;
       font-family: Arial, sans-serif;
     }
+    
+    /* Override h2 color in sidebar */
+    #sidebar h2 {
+      color: var(--text-col);
+    }
 
     .map-section #sidebar {
       width: 250px;
@@ -171,11 +176,30 @@
       background: rgba(255, 255, 255, 0.8);
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
+      color: var(--text-col-alt);
     }
 
     .info h4 {
       margin: 0 0 5px;
       color: #777;
+    }
+
+    .info.leaflet-control b {
+      color: var(--text-col-alt);
+    }
+
+    .mine-popup .popup-label {
+        color: var(--text-col-alt); 
+        font-weight: bold; 
+    }
+
+    .mine-popup .popup-value {
+        color: var(--text-col); 
+        font-weight: normal; 
+    }
+
+    #feature-description .detail-row {
+    color: var(--text-col-alt);
     }
 
     .mine-popup {
@@ -201,6 +225,7 @@
       margin-right: 8px;
       opacity: 0.7;
     }
+    
   </style>
 </head>
 
@@ -513,11 +538,11 @@
     var mineLayer = L.geoJson(Mines, {
       onEachFeature: function (feature, layer) {
         const popupContent = `
-          <div class="mine-popup">
-              <b>Name: ${feature.properties.name}</b><br>
-              <b>Commodity: ${feature.properties.COMMODITY}</b><br>
-              <b>Deposit Type: ${feature.properties.DEP_TYPE}</b>
-          </div>
+      <div class="mine-popup">
+          <span class="popup-label">Name:</span> <span class="popup-value">${feature.properties.name}</span><br>
+          <span class="popup-label">Commodity:</span> <span class="popup-value">${feature.properties.COMMODITY}</span><br>
+          <span class="popup-label">Deposit Type:</span> <span class="popup-value">${feature.properties.DEP_TYPE}</span>
+      </div>
         `;
 
         layer.bindPopup(popupContent);
