@@ -1101,6 +1101,20 @@ section.vid div.step-heading {
   transition: 0.3s;
 }
 
+.gk-disclaim {
+  margin: auto;
+  text-align: center;
+}
+
+.cite-link {
+  font-family: var(--font-secondary);
+  background-color: var(--clr-light);
+  border-radius: 5px;
+  padding-inline: 0.25rem;
+  color: var(--clr-dark);
+  border-color: var(--clr-dark);
+}
+
 .video-btn a {
   text-transform: uppercase !important;
   font-size: var(--fs-400);
