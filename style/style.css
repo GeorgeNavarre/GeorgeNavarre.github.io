@@ -250,9 +250,9 @@ nav.scroll li a {
     border-radius: 5px;
     background-color: var(--clr-dark);
   }
-  nav.scroll {
-    /* background: none; */
-  }
+  /* nav.scroll {
+    background: none;
+  } */
   .checkbtn i:hover {
     color: var(--clr-light);
     background-color: var(--clr-dark);
