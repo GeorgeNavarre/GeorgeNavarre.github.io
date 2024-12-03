@@ -767,7 +767,7 @@ cite:before {
       rgba(85, 138, 132, 0.2)
     ),
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../images/mountain.png);
+    url(../images/webp/mountain.webp);
   background-position: 0%;
   padding: 1rem;
 }
@@ -915,7 +915,7 @@ section.vid div.step-heading {
 .main-title {
   margin: auto;
   margin-bottom: 2rem;
-  background-image: url(../images/mountain.png);
+  background-image: url(../images/webp/mountain.webp);
   background-position: center;
   padding: 2rem;
   max-width: 100vw;
@@ -1368,7 +1368,7 @@ section.vid div.step-heading {
   margin-inline: auto;
   overflow: hidden;
   margin-top: -2rem;
-  background-image: url(../images/map_mock.png);
+  background-image: url(../images/webp/map-mock.webp);
   background-color: white;
   background-position: center;
   background-size: cover;
@@ -1387,7 +1387,7 @@ section.vid div.step-heading {
   margin-inline: auto;
   overflow: hidden;
   margin-top: -2rem;
-  background-image: url(../images/wiki_mock.png);
+  background-image: url(../images/webp/wiki-mock.webp);
   background-color: white;
   background-position: center;
   background-size: cover;
