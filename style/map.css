@@ -105,7 +105,8 @@ p {
 
 .map-section #map-container {
   flex: 1;
-  height: 80vh;
+  max-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
 }
@@ -161,6 +162,7 @@ p {
 
 .info-content {
   flex: 1;
+  overflow: scroll;
 }
 
 .info-content h2 {

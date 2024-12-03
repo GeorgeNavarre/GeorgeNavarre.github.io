@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PanEcology Home</title>
+    <title>About PanEcology</title>
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/scroll-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,6 +76,9 @@
     </section>
     <section class="sticky-section">
       <h1>Graphing Knowledge</h1>
+        <p class="gk-disclaim">
+          To illustrate our process we are here using Sesame Street as a fun, neutral, and - of course - fictional place. We are developing PanEcology using real-life places. 
+        </p>
       <div class="browse">
         <div class="img-div">
           <img src="..\images\ontology.webp" alt="A balls and spokes model, where the balls represent entities and the spokes represent relationships. This is a basic representation of a knowledge graph"/>
@@ -88,7 +91,7 @@
         </div>
         <div class="description">
           <p>
-            We create an ontology where everything is related in groups called
+            First, we create an ontology where everything is related in groups called
             ”triples”. A triple is a group of two "entities"- which are any
             objects represented in the ontology - with a predefined relationship between
             them. The relationship is explicitly recorded in the ontology.
@@ -161,10 +164,10 @@
       <div class="browse">
         <div class="description">
           <p>
-            When you ask a plain language question, the LLM will create a corresponding query in the appropriate language so you don't have to! The database will then perform the query and provide the results to the user. It's important to note that at no point is the LLM actually presenting the user with information: it is only formulating the query. This gets around the problem with AI hallucination.
+            When you ask a plain language question, the LLM will create a corresponding query in the appropriate language so you don't have to! <br /><br /> That query is then executed against our database, and the results are served to the user like <a class="cite-link" href="../pages/search.html" target="__blank" >this</a>. <br/><br/> It is important to note that the LLM is used only to formulate the query and to make the data human-readable. All information is pulled from our database of rigorously vetted and well-sourced data. This minimizes AI hallucination.
           </p>
           <p>
-            The knowledge graph enables us to infer connections between data entities that have not been specifically added to the system. 
+            The knowledge graph enables machine inference of connections between entities that have not been directly linked with a relationship, so the database can serve results that are not necessarily obvious.
           </p>
         </div>       
           <div class="img-div">
@@ -194,11 +197,12 @@
       <div class="browse">
         <div class="description">
           <p>
-            The fact that Leon has a cousin who lives on Sesame Street is never <em>explicitly</em> encoded in the database, but the knowledge graph enables us to infer this fact. 
+            <em>For example,</em> the fact that Leon has a cousin who lives on Sesame Street is never <em>explicitly</em> encoded in the database, but the knowledge graph enables us to infer this fact. <br/> <br/>
+            This example may seem trivial, but this ability becomes more powerful as you can make relevant inferences between entities across many degrees of separation.
           </p>
         </div>       
           <div class="img-div">
-            <img src="..\images\leonwiki.webp" alt="An illustration of a wiki-style page, the subject of which is Leon the Grouch." />
+            <img src="..\images\mg-inference.webp" alt="An illustration of a wiki-style page, the subject of which is Leon the Grouch." />
           </div>
 
       </div>
@@ -262,7 +266,7 @@
         </div>
         <div class="description" id="map-text">
           <p>
-            We know the location of the proposed mine, but because the proposal is so new, PanEcology doesn’t have data on it yet.<br \><br \> No worries! You can create a custom selection using either a drawn polygon or a point. We’ll use a point and enter the coordinates of the proposed mine.
+            We know the location of the proposed mine, but because the proposal is so new, PanEcology doesn’t have data on it yet.<br \><br \> No worries! You can create a custom selection using either a drawn polygon or a point. We’ll use the point selection tool and drop a marker near the proposed mine location.
           </p>
           <p>
             We know that Oscar lives on Sesame Street, and that Sesame Street is in New York City, so we enable the Cities layer and select New York.  Now we can see the boundaries of New York, and in the info box at the bottom of the interface we are presented with basic information about the city. If we wished, we could click on that info to navigate through to the NYC wiki page, but for now we will continue our investigation on the map.
@@ -285,7 +289,16 @@
           </p>
         </div>
       </div>
-      
+      <div class="intro">
+        <p>
+          Support development of this service with a Patreon substription!
+        </p>
+        <div class="support-link body-link">
+          <a class="btn" href="http://www.patreon.com/PanEcology"
+            >Support Our Mission!</a
+          >
+        </div>
+      </div>
     </section>
 
     
