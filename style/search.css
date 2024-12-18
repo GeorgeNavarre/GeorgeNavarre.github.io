@@ -163,6 +163,7 @@ sup a:hover {
   flex: 2;
   display: flex;
   flex-direction: column;
+  position: static;
 }
 
 .info h1 {
@@ -311,6 +312,15 @@ li {
   .search-column {
     margin: auto;
     margin-top: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .biblio {
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+    margin-bottom: 3rem;
   }
 
   .search-div input {
@@ -321,6 +331,8 @@ li {
 
   .info {
     margin-top: 0;
+    max-height: 100vh;
+    overflow: scroll;
   }
 
   .structured-data {
@@ -331,5 +343,9 @@ li {
   .structured-data img {
     max-width: fit-content;
     height: auto;
+  }
+
+  .intro {
+    max-width: 80vw;
   }
 }
